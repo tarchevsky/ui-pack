@@ -1,10 +1,10 @@
 # UI-pack
+![License](https://img.shields.io/badge/licence-GPL--3.0-yellowgreen)
 
 * [Назначение репозитория / библиотеки](#target)
 * [README gulp-pug-starter с основами работы сборщика](#gulp-pug-starter)
 
 ## <a name="target">Назначение репозитории / библиотеки</a>
-![License](https://img.shields.io/badge/licence-GPL--3.0-yellowgreen)
 
 # <a name="gulp-pug-starter">README изначального репозитория gulp-pug-starter, на основе которого был создана библиотека UI-pack.</a>
 
