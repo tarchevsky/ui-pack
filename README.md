@@ -4,9 +4,9 @@
 * [README gulp-pug-starter с основами работы сборщика](#gulp-pug-starter)
 
 ## <a name="target">Назначение репозитории / библиотеки</a>
-<a name="gulp-pug-starter">![License](https://img.shields.io/badge/licence-GPL--3.0-yellowgreen)</a>
+![License](https://img.shields.io/badge/licence-GPL--3.0-yellowgreen)
 
-# README изначального репозитория gulp-pug-starter, на основе которого был создана библиотека UI-pack.
+# <a name="gulp-pug-starter">README изначального репозитория gulp-pug-starter, на основе которого был создана библиотека UI-pack.</a>
 
 ![License](https://img.shields.io/github/license/andreyalexeich/gulp-pug-starter)
 ![GitHub stars](https://img.shields.io/github/stars/andreyalexeich/gulp-pug-starter.svg?style=social)
