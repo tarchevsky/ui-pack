@@ -2,7 +2,7 @@
 ![License](https://img.shields.io/badge/licence-GPL--3.0-yellowgreen)
 
 1. [Назначение репозитория / библиотеки](#target)
-2. [README gulp-pug-starter с основами работы сборщика](#gulp-pug-starter)
+[README gulp-pug-starter с основами работы сборщика](#gulp-pug-starter)
    - [Особенности]()
    - [Установка]()
    - [Файловая структура]()
