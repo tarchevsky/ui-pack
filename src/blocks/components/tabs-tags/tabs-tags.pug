@@ -1,0 +1,75 @@
+section.tabs-tags
+    .tabs-tags__row
+        button.tabs-tags__button(type="button") Frontend
+        button.tabs-tags__button(type="button") UX-research
+        button.tabs-tags__button(type="button") Customer development
+        button.tabs-tags__button(type="button") Javascript
+        button.tabs-tags__button(type="button") React
+        button.tabs-tags__button(type="button") Development and postproduction
+        button.tabs-tags__button(type="button") 3D modeling
+        button.tabs-tags__button(type="button") Backend
+        .tabs-tags__item
+            h2 Item 1
+            img(src="img/img.jpg" alt="Лес")
+        .tabs-tags__item
+            h2 Item 2
+            ul
+                li Пункт 1
+                li Пункт 2
+                li Пункт 3
+                li Пунтк 4
+        .tabs-tags__item
+            h2 Item 3
+            .row
+                img.img(src="img/img.jpg" alt="Лес")
+                img.img(src="img/img.jpg" alt="Лес")
+                img.img(src="img/img.jpg" alt="Лес")
+        .tabs-tags__item
+            h2 Item 4
+            p Мы живём на тихом островке невежества посреди темного моря бесконечности, и нам вовсе не следует плавать на далекие расстояния.
+        .tabs-tags__item
+            h2 Item 5
+            img.img(src="img/img.jpg" alt="Лес")
+            p Когда-нибудь мы вспомним, что такое никуда не бежать, приедем в свой родной лес из детства, обнимем старый дуб и вернём себе то детское спокойствие и безмятежность
+        .tabs-tags__item
+            h2 Item 6
+            .table__wrapper
+                table.table
+                    caption.table__caption Название таблицы
+                    thead
+                        tr.table__row
+                            th.table__header Колонка 1
+                            th.table__header Колонка 2
+                            th.table__header Колонка 3
+                    tbody.table__body
+                        tr.table__row
+                            td.table__data(rowspan="2") Данные в две <br>строки
+                            td.table__data Текст
+                            td.table__data Текст
+                        tr.table__row
+                            td.table__data(colspan="2") Строчка в две колонки, чтобы вмещался длинный текст, вроде этого
+                        tr.table__row
+                            td.table__data Текст
+                            td.table__data Текст
+                            td.table__data Текст
+                        tr.table__row
+                            td.table__data Текст
+                            td.table__data Текст
+                            td.table__data Текст
+                    tfoot.table__footer
+                        tr.table__row
+                            td.table__data
+                            td.table__data
+                            td.table__data Итог:<br><strong>999р.</strong>
+        .tabs-tags__item
+            h2 Item 7
+            include ../../components/accordion/accordion
+        .tabs-tags__item
+            h2 Item 8
+            .row
+                h1 Заголовок 1
+                h2 Заголовок 2
+                h3 Заголовок 3
+                h4 Заголовок 4
+                h5 Заголовок 5
+                h6 Заголовок 6

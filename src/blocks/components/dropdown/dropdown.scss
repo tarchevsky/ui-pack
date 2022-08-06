@@ -1,0 +1,124 @@
+.dropdown {
+  display: inline-block;
+  position: relative;
+
+  &__parent {
+    width: 100%;
+    border: 0;
+    padding: 10px;
+    margin-block: 0;
+    color: $base-color;
+    background-color: transparent;
+    text-align: center;
+    transition: color $transition;
+
+    &:hover {
+      color: $disabled-color;
+    }
+  }
+
+  &__items {
+    @include translateX;
+
+    display: none;
+    position: absolute;
+    inset-block-start: 43px;
+    inset-inline-start: 50%;
+    z-index: 90;
+    width: 100%;
+    color: transparent;
+    text-align: center;
+    letter-spacing: inherit;
+    background-color: $contrast-color;
+    max-height: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__item {
+    transition: all 0.1s ease-in-out;
+
+    p {
+      margin-block: 0;
+      padding: 10px;
+    }
+
+    a {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      background-color: $accent-color;
+
+      p, a {
+        color: $base-color;
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    inset-inline-end: 3px;
+    inset-block-start: 48%;
+    border-bottom: $border;
+    border-right: $border;
+    transform: translateY(-50%) rotate(45deg);
+    transition: all $transition;
+  }
+
+  &--active::after {
+    display: block;
+    transform: translateY(-10%) rotate(-135deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown-burger {
+    &::after {
+      border-color: #fff;
+    }
+
+    .dropdown {
+      &__parent {
+        color: #fff;
+      }
+
+      &__item {
+        margin-block-start: $ind;
+        background-color: transparent;
+
+        a {
+          background-color: transparent;
+          &:hover {
+            background-color: transparent;
+            border: none;
+            color: $accent-color;
+          }
+        }
+      }
+    }
+
+    #dropdown {
+      &-burger {
+        &:hover {
+          color: revert;
+        }
+      }
+
+      &-items {
+        inset-block-start: revert;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .dropdown {
+    &__items {
+      inset-block-start: 32px;
+    }
+  }
+}

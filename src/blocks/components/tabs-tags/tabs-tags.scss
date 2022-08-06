@@ -1,0 +1,48 @@
+.tabs-tags {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 $ind;
+
+    button {
+      margin-block: 20px 0;
+    }
+  }
+
+  &__button {
+    background-color: $bg-color;
+    border: $border;
+
+    &:hover {
+      background-color: $accent-color;
+    }
+  }
+
+  &__item {
+    display: none;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.9s;
+
+    &--active {
+      opacity: 1;
+    }
+
+    img {
+      margin-block: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tabs-tags {
+    button {
+      min-width: auto;
+      padding: 10px;
+      font-size: 0.625rem; // 10px
+    }
+  }
+}

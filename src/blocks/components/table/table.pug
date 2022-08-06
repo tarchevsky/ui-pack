@@ -1,0 +1,28 @@
+.table__wrapper
+    table.table
+        caption.table__caption Название таблицы
+        thead
+            tr.table__row
+                th.table__header Колонка 1
+                th.table__header Колонка 2
+                th.table__header Колонка 3
+        tbody.table__body
+            tr.table__row
+                td.table__data(rowspan="2") Данные в две <br>строки
+                td.table__data Текст
+                td.table__data Текст
+            tr.table__row
+                td.table__data(colspan="2") Строчка в две колонки, чтобы вмещался длинный текст, вроде этого
+            tr.table__row
+                td.table__data Текст
+                td.table__data Текст
+                td.table__data Текст
+            tr.table__row
+                td.table__data Текст
+                td.table__data Текст
+                td.table__data Текст
+        tfoot.table__footer
+            tr.table__row
+                td.table__data
+                td.table__data
+                td.table__data Итог:<br><strong>999р.</strong>

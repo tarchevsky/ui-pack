@@ -1,11 +1,18 @@
 extends ../layouts/default
 
 block variables
-	- const title = "New Page";
+    - const title = "Шаблон страницы";
+
+block header
+    include ../../blocks/modules/header/header
 
 block content
-	include ../../blocks/modules/header/header
-	include ../../blocks/modules/footer/footer
+    include ../../blocks/modules/main/main
+
+
+block footer
+    include ../../blocks/modules/footer/footer
 
 block scripts
-	script(src="js/vendor.js")
+    //script(src="js/vendor.js")
+    script(src="js/main.js")

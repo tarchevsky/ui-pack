@@ -1,0 +1,27 @@
+@mixin shadow {
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.32);
+}
+@mixin gap {
+  gap: 20px;
+}
+@mixin absolute {
+  display: block;
+  position: absolute;
+}
+@mixin translateY {
+  transform: translateY(-50%);
+}
+@mixin translateX {
+  transform: translateX(-50%);
+}
+@mixin translateAll {
+  transform: translate(-50%, -50%);
+}
+
+@mixin animation {
+  animation: animation $transition;
+}
+
+//@mixin arrow {
+//
+//}

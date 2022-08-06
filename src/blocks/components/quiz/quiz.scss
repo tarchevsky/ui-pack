@@ -1,0 +1,73 @@
+.quiz {
+  width: 100%;
+
+  &-questions {
+    &-item {
+      &__answers {
+        padding-inline-start: 0;
+
+        li {
+          &::before {
+            display: none;
+          }
+        }
+
+        label {
+          @include gap;
+
+          display: flex;
+        }
+
+        input[type='radio'] {
+          margin-block-start: 0;
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  &-results {
+    &-item {
+      &__question {
+        margin-block-start: $ind;
+      }
+
+      &__answers {
+        padding-inline-start: 0;
+
+        li {
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &-controls {
+    @include gap;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .button {
+      &__reset {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .quiz {
+    &-controls {
+      gap: 0;
+
+      button {
+        &:first-child {
+          margin-block-end: 0;
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
         "stylelint-selector-bem-pattern"
     ],
     "rules": {
-        "indentation": 4,
+        "indentation": 2,
         "plugin/selector-bem-pattern": [
             {
                 "implicitComponents": true,
@@ -30,7 +30,7 @@
                     "^&:empty",
                     "#{\\$[-a-z]+}__[-a-z]+",
                     "^\\*$"
-                ],
+                ]
             },
             {
                 "severity": "warning",
@@ -110,7 +110,7 @@
                     "border",
                     "border-*",
                     "padding",
-                    "padding-*",
+                    "padding-*"
                 ]
             },
             {
@@ -123,8 +123,8 @@
                     "transition",
                     "transition-*",
                     "animation",
-                    "animation-*",
-                ],
+                    "animation-*"
+                ]
             }
         ]],
         "color-hex-case": ["lower", {
@@ -159,7 +159,7 @@
         }],
         "font-weight-notation": ["numeric", {
             "message": "Необходимо указывать плотность шрифта цифрой",
-            ignore: ["relative"]
+            "ignore": ["relative"]
         }],
 
         "number-no-trailing-zeros": [true, {
@@ -230,7 +230,7 @@
 
         "value-keyword-case": ["lower", {
             "message": "Значения свойств следует писать строчными буквами",
-            "ignoreProperties": ["/font-/", ]
+            "ignoreProperties": ["/font-/"]
         }],
         "value-list-comma-space-after": ["always-single-line", {
             "message": "Необходим пробел в значениях после запятой"
@@ -248,8 +248,8 @@
         "string-no-newline": [true, {
             "message": "В строчных данных не должно быть переносов"
         }],
-        "string-quotes": ["double", {
-            "message": "В проекте двойные кавычки"
+        "string-quotes": ["single", {
+            "message": "В проекте одинарные кавычки"
         }],
 
         "selector-attribute-operator-disallowed-list": [["id"], {

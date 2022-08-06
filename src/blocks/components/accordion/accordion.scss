@@ -1,0 +1,42 @@
+summary {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  outline: none;
+  padding-inline-end: $ind;
+  padding-block: 20px;
+  border-bottom: $border;
+
+  &::marker {
+    display: none;
+  }
+
+  svg {
+    align-self: center;
+    justify-self: center;
+    width: 20px;
+    height: 20px;
+    transform: rotate(0deg);
+    transition: all $transition;
+  }
+}
+
+details {
+  summary, p {
+    padding-inline-start: $ind;
+  }
+
+  p {
+    display: block;
+    margin-block-start: $ind;
+    padding-inline-end: $ind;
+  }
+}
+
+.accordion {
+  &__icon {
+    &--active {
+      transform: rotate(180deg);
+    }
+  }
+}

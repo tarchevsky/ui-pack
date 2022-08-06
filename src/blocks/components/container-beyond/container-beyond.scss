@@ -1,0 +1,18 @@
+.container-beyond {
+  display: flex;
+  gap: $ind;
+  padding-left: max(20px, calc((100% - 1300px) / 2));
+
+  &__left {
+    flex-shrink: 0;
+    width: 490px;
+    min-height: 398px;
+    background-color: $accent-color
+  }
+
+  &__right {
+    width: calc(100% - 490px - 20px);
+    min-height: 398px;
+    background-color: $accent-color;
+  }
+}

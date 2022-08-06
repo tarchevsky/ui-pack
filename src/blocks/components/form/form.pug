@@ -1,0 +1,38 @@
+.form__wrapper
+    form#form.form(action="#" method="POST")
+        input#text.text(type="text" name="form__name" placeholder="Ваше имя")
+        .form__grid
+            .form__grid--item
+                input#tel.tel(type="tel" name="tel" placeholder="Ваш телефон")
+            .form__grid--item
+                input#email.email(type="email" name="email" placeholder="Ваша почта")
+        textarea#textarea.texarea(name="textarea" placeholder="Ваш вопрос" rows="3")
+        .form__privacy
+            input#checkbox.checkbox(name="checkbox" type="checkbox" checked)
+            label.form__privacy--text(for="checkbox") Нажимая на кнопку, я соглашаюсь на <a class="form__privacy--link" href="##">обработку персональных</a>
+        input#range.range(name='range' type='range' min='0' max='100' value='0' step='10')
+        //input#range.tange(type='range' list='tickmarks' value="0")
+        //datalist#tickmarks
+        //    option(value='0' label="0")
+        //    option(value='10')
+        //    option(value='20')
+        //    option(value='30')
+        //    option(value='40')
+        //    option(value='50')
+        //    option(value='60')
+        //    option(value='70')
+        //    option(value='80')
+        //    option(value='90')
+        //    option(value='100' label="100")
+        .form__radio
+            input#radio.radio(name='radio' type="radio")
+            label#form__radio--text.form__radio--text(for="radio") Текст
+        select#select.select
+            option Опция 1
+            option Опция 2
+            option Опция 3
+            option Опция 4
+        input#search.search(type="search")
+        input#date.date(type="date")
+        input#checkbox-switch.checkbox-switch(type="checkbox")
+        button#submit.submit(type="submit") Отправить

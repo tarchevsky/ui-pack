@@ -1,0 +1,23 @@
+img {
+  display: block;
+  margin-block-start: $ind;
+  margin-block-end: $ind;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.img {
+  width: 100%;
+  max-width: 600px;
+
+  &__float {
+    &--left {
+      float: left;
+    }
+
+    &--right {
+      float: right;
+    }
+  }
+}

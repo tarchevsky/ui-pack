@@ -1,0 +1,40 @@
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  gap: $ind;
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: all $transition;
+
+    &:hover {
+      border-color: $base-color;
+      color: $hover-color;
+    }
+
+    &--active {
+      border-bottom: 1px solid $base-color;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    &::after {
+      @include absolute;
+      @include translateY;
+
+      content: "/";
+      inset-block-start: 50%;
+      inset-inline-end: -15px;
+    }
+  }
+
+  &__item:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}

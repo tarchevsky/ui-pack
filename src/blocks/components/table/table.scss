@@ -1,0 +1,29 @@
+.table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  &__wrapper {
+    max-width: 1300px;
+  }
+
+  &__caption {
+    text-align: left;
+    padding: 10px;
+  }
+
+  &__header, &__data {
+    padding: 10px;
+    border: $border;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .table {
+    &__wrapper {
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+  }
+}

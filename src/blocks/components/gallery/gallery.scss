@@ -1,0 +1,30 @@
+.gallery {
+  &__inner {
+    @include gap;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .gallery {
+    img {
+      margin-block: 0 0;
+    }
+
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .img {
+        &:first-child {
+          img {
+            margin-block-start: 20px;
+          }
+        }
+      }
+    }
+  }
+}

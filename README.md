@@ -1,23 +1,25 @@
 # UI-pack
+
 ![License](https://img.shields.io/badge/licence-GPL--3.0-yellowgreen)
 
 [Назначение репозитория / библиотеки](#target)
 
 [README gulp-pug-starter с основами работы сборщика](#gulp-pug-starter)
-   - [Особенности](#features)
-   - [Установка](#installation)
-   - [Файловая структура](#structure)
-   - [Команды](#commands)
-   - [Рекомендации по использованию](#recommendations)
-   - [Компоненты](#components)
-   - [Страницы проекта](#pages)
-   - [Шрифты](#fonts)
-   - [Изображения](#images)
-   - [SVG-спрайты](#sprites)
-   - [Сторонние библиотеки](#vendors)
-   - [Нужен SCSS без Pug?](#withoutpug)
-   - [Нравится проект gulp-pug-starter?](#donate)
-   - [Контакты создателя gulp-pug-starter](#contacts)
+
+- [Особенности](#features)
+- [Установка](#installation)
+- [Файловая структура](#structure)
+- [Команды](#commands)
+- [Рекомендации по использованию](#recommendations)
+- [Компоненты](#components)
+- [Страницы проекта](#pages)
+- [Шрифты](#fonts)
+- [Изображения](#images)
+- [SVG-спрайты](#sprites)
+- [Сторонние библиотеки](#vendors)
+- [Нужен SCSS без Pug?](#withoutpug)
+- [Нравится проект gulp-pug-starter?](#donate)
+- [Контакты создателя gulp-pug-starter](#contacts)
 
 ## <a name="target">Назначение репозитории / библиотеки</a>
 
@@ -29,6 +31,7 @@
 <a href="https://qiwi.com/n/ANDREYALEXEICH"><img src="https://img.shields.io/badge/%D0%97%D0%B0%D0%B4%D0%BE%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D0%B8%D0%B2%D0%BE-Qiwi-orange?style=for-the-badge&logo=qiwi"></a>
 
 ## :fire: <a name="features">Особенности</a>
+
 * именование классов по [БЭМ](https://ru.bem.info/)
 * используется БЭМ-структура
 * используются препроцессоры [Pug](https://pugjs.org/) и [SCSS](https://sass-lang.com/)
@@ -38,11 +41,12 @@
 * используется проверка кода на ошибки перед коммитом
 
 ## :hammer_and_wrench: <a name="installation">Установка</a>
+
 * установите [NodeJS](https://nodejs.org/en/)
 * установите глобально:
-    * [Yarn](https://yarnpkg.com/getting-started): ```npm i -g yarn```
-    * [Gulp](https://gulpjs.com/): ```npm i -g gulp```
-    * [Bem Tools](https://www.npmjs.com/package/bem-tools-core): ```npm i -g bem-tools-core```
+  * [Yarn](https://yarnpkg.com/getting-started): ```npm i -g yarn```
+  * [Gulp](https://gulpjs.com/): ```npm i -g gulp```
+  * [Bem Tools](https://www.npmjs.com/package/bem-tools-core): ```npm i -g bem-tools-core```
 * скачайте сборку с помощью [Git](https://git-scm.com/downloads): ```git clone https://github.com/andreyalexeich/gulp-pug-starter.git```
 * перейдите в скачанную папку со сборкой: ```cd gulp-pug-starter```
 * введите ```yarn set version berry```
@@ -60,13 +64,13 @@ gulp-pug-starter
 ├── dist
 ├── gulp-tasks
 ├── src
-│   ├── blocks
-│   ├── fonts
-│   ├── img
-│   ├── js
-│   ├── styles
-│   ├── views
-│   └── .htaccess
+│   ├── blocks
+│   ├── fonts
+│   ├── img
+│   ├── js
+│   ├── styles
+│   ├── views
+│   └── .htaccess
 ├── gulpfile.babel.js
 ├── webpack.config.js
 ├── package.json
@@ -80,31 +84,32 @@ gulp-pug-starter
 ```
 
 * Корень папки:
-    * ```.babelrc.js``` — настройки Babel
-    * ```.bemrc.js``` — настройки БЭМ
-    * ```.eslintrc.json``` — настройки ESLint
-    * ```.gitignore``` – запрет на отслеживание файлов Git'ом
-    * ```.stylelintrc``` — настройки Stylelint
-    * ```.stylelintignore``` – запрет на отслеживание файлов Stylelint'ом
-    * ```.yarnrc.yml``` – настройка Yarn
-    * ```gulpfile.babel.js``` — настройки Gulp
-    * ```webpack.config.js``` — настройки Webpack
-    * ```package.json``` — список зависимостей
+  * ```.babelrc.js``` — настройки Babel
+  * ```.bemrc.js``` — настройки БЭМ
+  * ```.eslintrc.json``` — настройки ESLint
+  * ```.gitignore``` – запрет на отслеживание файлов Git'ом
+  * ```.stylelintrc``` — настройки Stylelint
+  * ```.stylelintignore``` – запрет на отслеживание файлов Stylelint'ом
+  * ```.yarnrc.yml``` – настройка Yarn
+  * ```gulpfile.babel.js``` — настройки Gulp
+  * ```webpack.config.js``` — настройки Webpack
+  * ```package.json``` — список зависимостей
 * Папка ```src``` - используется во время разработки:
-    * БЭМ-блоки и компоненты: ```src/blocks```
-    * шрифты: ```src/fonts```
-    * изображения: ```src/img```
-    * JS-файлы: ```src/js```
-    * страницы сайта: ```src/views/pages```
-    * SCSS-файлы: ```src/styles```
-    * служебные Pug-файлы: ```src/views```
-    * конфигурационный файл веб-сервера Apache с настройками [gzip](https://habr.com/ru/post/221849/) (сжатие без потерь): ```src/.htaccess```
+  * БЭМ-блоки и компоненты: ```src/blocks```
+  * шрифты: ```src/fonts```
+  * изображения: ```src/img```
+  * JS-файлы: ```src/js```
+  * страницы сайта: ```src/views/pages```
+  * SCSS-файлы: ```src/styles```
+  * служебные Pug-файлы: ```src/views```
+  * конфигурационный файл веб-сервера Apache с настройками [gzip](https://habr.com/ru/post/221849/) (сжатие без потерь): ```src/.htaccess```
 * Папка ```dist``` - папка, из которой запускается локальный сервер для разработки (при запуске ```yarn run dev```)
 * Папка ```gulp-tasks``` - папка с Gulp-тасками
 
 ## :keyboard: <a name="commands">Команды</a>
+
 * ```yarn run lint:styles``` - проверить SCSS-файлы. Для VSCode необходимо установить [плагин](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint). Для WebStorm
-или PHPStorm необходимо включить Stylelint в ```Languages & Frameworks - Style Sheets - Stylelint``` (ошибки будут исправлены автоматически при сохранении файла)
+  или PHPStorm необходимо включить Stylelint в ```Languages & Frameworks - Style Sheets - Stylelint``` (ошибки будут исправлены автоматически при сохранении файла)
 * ```yarn run dev``` - запуск сервера для разработки проекта
 * ```yarn run build``` - собрать проект с оптимизацией без запуска сервера
 * ```yarn run build:views``` - скомпилировать Pug-файлы
@@ -123,91 +128,114 @@ gulp-pug-starter
 * ```yarn run lint:scripts --fix``` - исправить ошибки в JS-файлах согласно настройкам ESLint
 
 ## :bulb: <a name="recommendations">Рекомендации по использованию</a>
+
 ### Компонентный подход к разработке сайтов
+
 * каждый БЭМ-блок имеет свою папку внутри ```src/blocks/modules```
 * папка одного БЭМ-блока содержит в себе один Pug-файл, один SCSS-файл и один JS-файл (если у блока используется скрипт)
-    * Pug-файл блока импортируется в файл ```src/views/index.pug``` (или в необходимый файл страницы, откуда будет вызываться блок)
-    * SCSS-файл блока импортируется в файл ```src/blocks/modules/_modules.scss```
-    * JS-файл блока импортируется в ```src/js/import/modules.js```
+  * Pug-файл блока импортируется в файл ```src/views/index.pug``` (или в необходимый файл страницы, откуда будет вызываться блок)
+  * SCSS-файл блока импортируется в файл ```src/blocks/modules/_modules.scss```
+  * JS-файл блока импортируется в ```src/js/import/modules.js```
 
 Пример структуры папки с БЭМ-блоком:
+
 ```
 blocks
 ├── modules
-│   ├── header
-│   │   ├── header.pug
-│   │   ├── header.js
-│   │   ├── header.scss
+│   ├── header
+│   │   ├── header.pug
+│   │   ├── header.js
+│   │   ├── header.scss
 ```
 
 Чтобы вручную не создавать соответствующие папку и файлы, достаточно в консоли прописать следующие команды:
-* ```yarn run bem-m my-block``` - для создания БЭМ-блока в ```src/block/modules``` (для основных БЭМ-блоков), где ```my-block``` - имя БЭМ-блока (после создания нужно удалить содержимое js-файла БЭМ-блока); 
+
+* ```yarn run bem-m my-block``` - для создания БЭМ-блока в ```src/block/modules``` (для основных БЭМ-блоков), где ```my-block``` - имя БЭМ-блока (после создания нужно удалить содержимое js-файла БЭМ-блока);
 * ```yarn run bem-с my-component``` - для создания компонента в ```src/blocks/components``` (для компонентов), где ```my-component``` - имя компонента (после создания нужно удалить содержимое js-файла БЭМ-компонента);
 
 ### <a name="components">Компоненты</a>
+
 * компоненты (например, иконки, кнопки) оформляются в Pug с помощью примесей
 * каждый компонент имеет свою папку внутри ```src/blocks/components```
 * папка одного компонента содержит в себе один Pug-файл, один SCSS-файл и один JS-файл (если у компонента используется скрипт)
-    * Pug-файл компонента импортируется в файл главной страницы ```src/views/index.pug``` (или в необходимый файл страницы, откуда будет вызываться компонент)
-    * SCSS-файл компонента импортируется в файл ```src/blocks/components/_components.scss```
-    * JS-файл компонента импортируется в файл ```src/js/import/components.js```
+  * Pug-файл компонента импортируется в файл главной страницы ```src/views/index.pug``` (или в необходимый файл страницы, откуда будет вызываться компонент)
+  * SCSS-файл компонента импортируется в файл ```src/blocks/components/_components.scss```
+  * JS-файл компонента импортируется в файл ```src/js/import/components.js```
 
 ### <a name="pages">Страницы проекта</a>
+
 * страницы проекта находятся в папке ```src/views/pages```
-    * каждая страница (в том числе главная) наследует шаблон ```src/views/layouts/default.pug```
-    * главная страница: ```src/views/index.pug```
+  * каждая страница (в том числе главная) наследует шаблон ```src/views/layouts/default.pug```
+  * главная страница: ```src/views/index.pug```
 
 ### <a name="fonts">Шрифты</a>
+
 * шрифты находятся в папке ```src/fonts```
-    * используйте [форматы](https://caniuse.com/#search=woff) ```.woff``` и ```.woff2```
-    * шрифты подключаются в файл ```src/styles/base/_fonts.scss```
-    * сконвертировать локальные шрифты можно с помощью [данного сервиса](https://onlinefontconverter.com/)
+  * используйте [форматы](https://caniuse.com/#search=woff) ```.woff``` и ```.woff2```
+  * шрифты подключаются в файл ```src/styles/base/_fonts.scss```
+  * сконвертировать локальные шрифты можно с помощью [данного сервиса](https://onlinefontconverter.com/)
 
 ### <a name="images">Изображения</a>
+
 * изображения находятся в папке ```src/img```
-    * изображения автоматически конвертируются в формат ```.webp```. Подробная информация по использованию [тут](https://vk.com/@vk_it-webp)
-    * изображение для генерации фавиконок должно находиться в папке ```src/img/favicon``` и иметь размер не менее ```1024px x 1024px```
+  * изображения автоматически конвертируются в формат ```.webp```. Подробная информация по использованию [тут](https://vk.com/@vk_it-webp)
+  * изображение для генерации фавиконок должно находиться в папке ```src/img/favicon``` и иметь размер не менее ```1024px x 1024px```
 
 ### <a name="sprites">SVG-спрайты</a>
+
 Для создания спрайтов изображения ```.svg``` должны находиться в папке ```src/img/sprites```. Например, у нас есть файлы ```icon-1.svg```, ```icon-2.svg``` и ```icon-3.svg```, и мы должны обратиться к ```icon-2.svg```. Для этого в HTML нужно воспользоваться тегом ```use```:
+
 ```pug
 svg
     use(xlink:href="img/sprites/sprite.svg#logo")
 ```
+
 Изменить стили svg-иконки из спрайта в CSS:
+
 ```css
 svg use {
     fill: red;
 }
 ```
+
 Бывает такая ситуация, когда стили иконки поменять не получается. Это связано с тем, что при экспорте из Figma в svg добавляется лишний код. Например:
+
 ```html
 <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M4.90918 4.04542L13.091 9.54088L4.90918 14.9545L4.90918 4.04542Z" fill="#1B1B1D"/>
 </svg>
 ```
+
 Нужно удалить ```fill="none"``` и ```fill="#1B1B1D"```. Должно получиться так:
+
 ```html
 <svg width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
   <path d="M4.90918 4.04542L13.091 9.54088L4.90918 14.9545L4.90918 4.04542Z"/>
-</svg> 
+</svg>
 ```
 
 ### <a name="vendors">Сторонние библиотеки</a>
+
 * все сторонние библиотеки устанавливаются в папку ```node_modules```
-    * для их загрузки воспользуйтеcь командой ```yarn add package_name```
-    * для подключения JS-файлов библиотек импортируйте их в самом начале JS-файла БЭМ-блока (то есть тот БЭМ-блок, который использует скрипт), например:
-    ```javascript
-    import $ from "jquery";
-    ```
-    * для подключения стилевых файлов библиотек импортируйте их в файл ```src/styles/vendor/_libs.scss```
-    * JS-файлы и стилевые файлы библиотек самостоятельно изменять нельзя
+  * для их загрузки воспользуйтеcь командой ```yarn add package_name```
+  * для подключения JS-файлов библиотек импортируйте их в самом начале JS-файла БЭМ-блока (то есть тот БЭМ-блок, который использует скрипт), например:
+  
+  ```javascript
+  import $ from "jquery";
+  ```
+  
+  * для подключения стилевых файлов библиотек импортируйте их в файл ```src/styles/vendor/_libs.scss```
+  * JS-файлы и стилевые файлы библиотек самостоятельно изменять нельзя
 
 ## :point_right: <a name="withoutpug">Нужен SCSS без Pug?</a>
+
 Используйте [эту](https://github.com/andreyalexeich/gulp-scss-starter/) сборку.
 
 ## :yellow_heart: <a name="donate">Нравится проект?</a>
+
 Сообщайте мне о [багах](https://github.com/andreyalexeich/gulp-pug-starter/issues), ставьте звёздочку в правом верхнем углу, [задонатьте](https://qiwi.com/n/ANDREYALEXEICH) мне на пиво :beer:
 
 ## :envelope: <a name="contacts">Контакты</a>
+
 По всем вопросам пишите в [Telegram](https://t.me/andreyalexeich)
+
