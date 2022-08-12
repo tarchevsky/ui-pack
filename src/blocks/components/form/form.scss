@@ -41,7 +41,7 @@ input, textarea, select {
   }
 
   &:focus {
-    border: 1px solid $disabled-color;
+    border: 1px solid $disabled;
   }
 }
 
