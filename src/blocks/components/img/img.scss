@@ -20,4 +20,10 @@ img {
       float: right;
     }
   }
+
+  &__empty {
+    img {
+      margin-block: 0
+    }
+  }
 }
