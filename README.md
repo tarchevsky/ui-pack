@@ -17,6 +17,9 @@
     * адаптация col
   * row
     * адаптация row
+- [Вендорские скрипты:](#scripts-vendor)
+  * установка
+  * подключение
 
 [Компоненты](#components)
 - [Подключение компонентов](#import-component)
@@ -147,6 +150,27 @@ CSS - правила сетки описаны в файле ```./src/styles/bas
 Нужен для автоматической адаптации колонок внутри
 
 #### адаптация row
+
+## <a name="scripts-vendor">Вендорские скрипты</a>
+
+В библиотеке есть два вендорских скрипта, а точнее, импорта:
+1. Swiper Slider (component slider)
+2. Fancybox (component gallery)
+
+#### Установка
+
+```yarn add <library>```
+
+#### Подключение
+
+Внутри JS-файла компонента
+
+```./src/blocks/components/component-name.js```
+
+вставить
+
+```import { name } from "path";``` или
+```import name { plugins } from "path";```
 
 ## SVG-спрайты
 
