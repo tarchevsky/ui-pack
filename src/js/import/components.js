@@ -8,6 +8,7 @@ import "%components%/modal/modal";
 
 //! Other
 
+import "%components%/gallery/gallery";
 import "%components%/accordion/accordion";
 import "%components%/show-more/show-more";
 import "%components%/slider/slider";
@@ -17,4 +18,3 @@ import "%components%/tabs-tags/tabs-tags";
 // import "%components%/breadcrumbs/breadcrumbs";
 // import "%components%/circle/circle";
 // import "%components%/quiz/quiz";
-// import "%components%/gallery/gallery";

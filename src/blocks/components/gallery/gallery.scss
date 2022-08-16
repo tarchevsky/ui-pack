@@ -28,3 +28,18 @@
     }
   }
 }
+
+.carousel__button {
+  min-width: revert;
+  margin-block: 0;
+
+  &:hover {
+    background-color: transparent;
+    color: inherit;
+  }
+}
+
+.fancybox__image {
+  height: 100% !important;
+  margin-block: 0;
+}

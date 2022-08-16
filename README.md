@@ -275,6 +275,28 @@ JS-файлов у компонента нет
 
 ### Галерея (gallery)
 
+Lightbox в галерее реализован через fancybox.
+
+##### Верстка
+
+Подключение в index.pug: ```include ../blocks/components/gallery/gallery```
+
+Для того, чтобы активировать работу fancybox, напишите верстку такого вида:
+```
+a(data-fancybox="gallery" href="img/img.webp")
+    img(src="img/img.webp")
+```
+
+##### CSS
+
+Подключение в ```_components.scss```: раскомментировать ```@import 'gallery/gallery';```
+
+###### JS
+
+Подключение в ```components.js```: раскомментировать```import "%components%/gallery/gallery";```.
+
+Базовые настройки fancybox будут внутри.
+
 ## <a name="semantics">Рекомендации и напоминания о возможных способах реализации блоков с помощью семантических тегов</a>
 
 ### Семантические теги и за что они отвечают
