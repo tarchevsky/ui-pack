@@ -77,6 +77,12 @@
 Найдите строчку ```include ../blocks/modules/main/main``` и ниже вставьте ```
 include ../blocks/modules/demo/demo```.
 
+Также раскомментируйте все строки в файлах:
+
+```./src/blocks/components/components.scss```,
+```./src/js/import/components.js```
+
+
 ## <a name="target">Назначение репозитория / библиотеки</a>
 
 ### Переиспользование, универсальность
