@@ -35,11 +35,11 @@
   }
 
   &__item {
+    padding: 10px;
     transition: all 0.1s ease-in-out;
 
     p {
       margin-block: 0;
-      padding: 10px;
     }
 
     a {
@@ -92,6 +92,7 @@
 
         a {
           background-color: transparent;
+
           &:hover {
             background-color: transparent;
             border: none;
