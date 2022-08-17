@@ -1,34 +1,49 @@
 .demo
     .demo__col.col
+        h2 Слайдер
         include ../../components/slider/slider
-        include ../../components/show-more/show-more
-        include ../../components/accordion/accordion
-        include ../../components/dropdown/dropdown
-        include ../../components/form/form
-        include ../../components/table/table
-        include ../../components/tabs-tags/tabs-tags
-        h1  Текст заголовка
-        p Новый текст мне надо, чтобы он перенесся, я Джек Торренс, я пишу один и тот же текст. Новый текст мне надо, чтобы он перенесся, я Джек Торренс, я пишу <a href="./page.html">один</a> и тот же текст. Новый текст мне надо, чтобы он перенесся, я Джек Торренс, я пишу один и тот же текст.
-        h1 Блок с картинкой
+        h1 Заголовок первого уровня
+        h2 Заголовок второго уровня
+        h3 Заголовок третьего уровня
+        h4 Заголовок четвертого уровня
+        h5 Заголовок пятого уровня
+        h6 Заголовок шестого уровня
+        h2 Текстовый блок
+        p Новый текст мне надо, чтобы он перенесся, я Джек Торренс, я пишу один и тот же текст. Новый текст мне надо, чтобы он перенесся, я Джек Торренс, я пишу один и тот же текст. Новый текст мне надо, чтобы он перенесся, я Джек Торренс, я пишу один и тот же текст.
+        a(href="##") Ссылка
+        h3 Маркированный список
+        ul
+            li.list__item Пункт 1
+            li.list__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque deserunt dicta dolore, dolorum excepturi, facilis harum, hic incidunt magnam minima mollitia non quo.
+        h2 Кнопка
+        include ../../components/button/button
+        h3 Обычная картинка
+        img(src="img/img.jpg" alt="Картинка")
+        h3 Картинка с заданным размером и сжатием object-fit
+        .img
+            img(src="img/img.jpg" alt="Картинка")
+        h3 Простая галерея
         .row
             .img.img__empty
-                img(src="img/img.jpg")
+                img(src="img/img.jpg" alt="Картинка")
             .img.img__empty
-                img(src="img/img.jpg")
+                img(src="img/img.jpg" alt="Картинка")
             .img.img__empty
-                img(src="img/img.jpg")
-            .img.img__empty
-                img(src="img/img.jpg")
-        h2 Список готовых модулей
-        ul
-            li.list__item <a href="/container-beyond.html">Контейнер, выходящий за границу</a>
-            li.list__item Текст 2
-            li.list__item Текст 3
+                img(src="img/img.jpg" alt="Картинка")
+        h2 Галерея с лайтбоксами на fancybox
+            include ../../components/gallery/gallery
+        h3 Шаблон формы
+        include ../../components/form/form
+        h2 Таблицы
+        include ../../components/table/table
+        h3 Выпадающий список
+        include ../../components/dropdown/dropdown
+        h3 Показать больше
+        include ../../components/show-more/show-more
+        h3 Аккордеон
+        include ../../components/accordion/accordion
+        h3 Табы в виде тегов
+        p.disabled // Можно переделать под облако тегов
+        include ../../components/tabs-tags/tabs-tags
+        h3 Модальное окно
         button(data-modal) Модалка
-        a(href="#")
-            button Текст
-        a(href="##") Текст
-        h3 Заголовок 3
-        h6 Заголовок 6
-        h5 Это кнопка в активном состоянии
-        button.button__active Текст
