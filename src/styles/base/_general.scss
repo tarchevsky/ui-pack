@@ -96,6 +96,10 @@ a {
 //
 //}
 
+.disabled {
+  color: $disabled;
+}
+
 section, aside {
   display: block;
   margin-block-start: $ind;
