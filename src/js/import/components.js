@@ -1,17 +1,15 @@
 //! Basic
 
 import "%components%/burger/burger";
-import "%components%/dropdown/dropdown";
-import "%components%/form/form";
-import "%components%/button/button";
-import "%components%/modal/modal";
 
 //! Other
 
+import "%components%/dropdown/dropdown";
+import "%components%/modal/modal";
 import "%components%/gallery/gallery";
+import "%components%/slider/slider";
 import "%components%/accordion/accordion";
 import "%components%/show-more/show-more";
-import "%components%/slider/slider";
 import "%components%/tabs-tags/tabs-tags";
 
 // import "%components%/dropdown-lang/dropdown-lang";
