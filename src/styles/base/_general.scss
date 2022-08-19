@@ -92,9 +92,11 @@ a {
   }
 }
 
-//blockquote {
-//
-//}
+blockquote {
+  margin-block-start: $ind;
+  margin-block-end: $ind;
+  margin-inline: 0;
+}
 
 .disabled {
   color: $disabled;
