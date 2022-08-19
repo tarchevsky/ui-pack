@@ -125,6 +125,12 @@ section, aside {
   gap: $ind;
 }
 
+.content {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr);
+  gap: $ind;
+}
+
 @media screen and (max-width: 1300px) {
   .layout, .container {
     padding: 0 $ind;
