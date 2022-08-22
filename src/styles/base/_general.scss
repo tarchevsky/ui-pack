@@ -113,7 +113,7 @@ section, aside {
 
 .layout {
   display: grid;
-  grid-template-rows: 80px minmax(75%, 1fr) 80px;
+  grid-auto-rows: 80px minmax(75vh, 1fr) 80px;
   grid-template-columns: minmax(250px, $container);
   gap: $ind;
   justify-content: center;
