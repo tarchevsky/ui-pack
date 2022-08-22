@@ -187,7 +187,7 @@ CSS - правила сетки описаны в файле ```./src/styles/bas
 Использование в коде выглядит так:
 
 ```
-  +sprite("class", "img/sprites/sprites.svg#svgname", width="value", height="value")
+  +sprite("class", "img/sprites/sprite.svg#svgname", width="value", height="value")
 ```
 
 ## Адаптация
