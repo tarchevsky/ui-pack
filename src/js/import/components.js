@@ -4,6 +4,7 @@ import "%components%/burger/burger";
 
 //! Other
 
+// import "%components%/tabs/tabs";
 // import "%components%/dropdown/dropdown";
 // import "%components%/modal/modal";
 // import "%components%/gallery/gallery";

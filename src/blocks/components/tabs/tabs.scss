@@ -1,0 +1,51 @@
+.tabs {
+  &-panel {
+
+    &__item {
+      display: inline-block;
+      padding: $ind;
+      margin-inline-end: -6px;
+      cursor: pointer;
+      transition: all $transition;
+
+      &:hover {
+        background-color: $base-color;
+        color: $contrast-color;
+      }
+
+      h3 {
+        margin-block: 0;
+      }
+
+      &--active {
+        background-color: $active-color;
+        color: $contrast-color;
+
+        &:hover {
+          background-color: $active-color;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  &-content {
+    &__item {
+      display: none;
+      padding: $ind;
+      transition: all 0.9s;
+
+      &--active {
+        background-color: $active-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tabs {
+    &-item {
+      padding: $indmin;
+    }
+  }
+}
