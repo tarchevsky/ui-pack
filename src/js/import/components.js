@@ -8,6 +8,7 @@ import "%components%/burger/burger";
 // import "%components%/dropdown/dropdown";
 // import "%components%/modal/modal";
 // import "%components%/gallery/gallery";
+// import "%components%/flex-gallery/flex-gallery";
 // import "%components%/slider/slider";
 // import "%components%/accordion/accordion";
 // import "%components%/show-more/show-more";

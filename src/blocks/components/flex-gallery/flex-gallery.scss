@@ -1,0 +1,49 @@
+.flex-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: $indmin;
+
+  &__slide {
+    display: flex;
+    flex: 1;
+    position: relative;
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    height: 100%;
+    transition: all $transition;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0 0 0 / 40%);
+    }
+
+    h3 {
+      position: absolute;
+      z-index: 10;
+      inset-block-end: $ind;
+      inset-inline-start: $ind;
+      margin-block: 0;
+      opacity: 0;
+    }
+
+    &--active {
+      flex: 10;
+
+      h3 {
+        opacity: 1;
+        transition: opacity $transition 0.3s;
+      }
+    }
+  }
+}
