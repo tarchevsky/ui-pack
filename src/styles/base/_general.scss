@@ -144,6 +144,28 @@ section, aside {
   gap: $ind;
 }
 
+.content-sidebar {
+  display: grid;
+  grid-template-columns: minmax(350px, auto) 1fr;
+  gap: 0 $gap;
+
+  .content {
+    margin-inline-end: $ind;
+  }
+}
+
+.sidebar {
+  position: relative;
+  height: 100%;
+  background-color: $disabled;
+
+  &__inner {
+    position: sticky;
+    inset-block-start: 0;
+    padding: $ind;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .container {
     padding: 0 $ind;
@@ -154,6 +176,16 @@ section, aside {
 
     &-none {
       margin-inline: -2vw;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-sidebar {
+    grid-template-columns: 1fr;
+
+    .content {
+      margin-inline: $ind;
     }
   }
 }
