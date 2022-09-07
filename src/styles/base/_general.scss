@@ -109,16 +109,27 @@ section, aside {
   margin-block-start: $ind;
 }
 
-.layout, .container {
+.container, .layout {
   margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80px minmax(75vh, 1fr) 80px;
+  grid-template-columns: minmax(250px, $container);
+  justify-content: center;
+  gap: $ind;
 }
 
 .layout {
   display: grid;
   grid-template-rows: 80px minmax(75vh, 1fr) 80px;
-  grid-template-columns: minmax(250px, $container);
   gap: $ind;
-  justify-content: center;
+  margin-inline: $layout-margin;
+
+  &-none {
+    margin-inline: -$layout-margin;
+  }
 }
 
 .row {
@@ -134,8 +145,16 @@ section, aside {
 }
 
 @media screen and (max-width: 1300px) {
-  .layout, .container {
+  .container {
     padding: 0 $ind;
+  }
+
+  .layout {
+    margin-inline: 2vw;
+
+    &-none {
+      margin-inline: -2vw;
+    }
   }
 }
 
