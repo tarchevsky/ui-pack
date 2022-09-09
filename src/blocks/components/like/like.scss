@@ -1,0 +1,32 @@
+.like {
+  display: flex;
+  align-items: center;
+  gap: $gapmin;
+
+  &-button {
+    width: 20px;
+    min-width: revert;
+    height: 20px;
+    padding: 0;
+    background-color: transparent;
+    margin-block: 0;
+
+    &:focus, &:active {
+      background-color: transparent;
+    }
+  }
+
+  &-heart {
+    width: 20px;
+    height: 20px;
+    fill: transparent;
+    stroke: #333;
+    stroke-width: 25px;
+    transition: fill $transition;
+
+    &:hover {
+      stroke: #ea0b0b;
+      fill: #ea0b0b;
+    }
+  }
+}

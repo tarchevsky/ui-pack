@@ -14,6 +14,7 @@ import "%components%/burger/burger";
 // import "%components%/accordion/accordion";
 // import "%components%/show-more/show-more";
 // import "%components%/tabs-tags/tabs-tags";
+// import "%components%/like/like;"
 // import "%components%/dropdown-lang/dropdown-lang";
 // import "%components%/circle/circle";
 // import "%components%/quiz/quiz";
