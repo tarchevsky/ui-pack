@@ -1,0 +1,90 @@
+.vertical-slider {
+  height: 100vh;
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .vertical-slider__down {
+      transform: translateX(-100%);
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    .vertical-slider__up {
+      transform: translateY(-100%);
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  &__sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;
+    transition: transform $transition;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+    }
+  }
+
+  &__main-slide {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    height: 100%;
+    transition: transform $transition;
+
+    & > div {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__controls {
+    button {
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      width: 20px;
+      min-width: revert;
+      margin-block: 0;
+      height: 20px;
+      background-color: #fff;
+
+      [name='chevron-down-outline'], [name='chevron-up-outline'] {
+        @include translateAll;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: $disabled;
+        transition: color $transition;
+
+        &:hover {
+          color: $base-color;
+        }
+      }
+
+      &:focus, &:active {
+        box-shadow: none;
+        background: #fff;
+      }
+    }
+  }
+}

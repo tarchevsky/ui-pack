@@ -10,6 +10,7 @@ import "%components%/burger/burger";
 // import "%components%/gallery/gallery";
 // import "%components%/flex-gallery/flex-gallery";
 // import "%components%/slider/slider";
+// import "%components%/vertical-slider/vertical-slider";
 // import "%components%/accordion/accordion";
 // import "%components%/show-more/show-more";
 // import "%components%/tabs-tags/tabs-tags";

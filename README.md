@@ -409,6 +409,20 @@ JS-файлов у компонента нет
 
 > Внимание! Не помещайте слайдер в grid и flex-контейнеры, либо дорабатывайте слайдер под свои задачи
 
+### <a name="vertical-slider">Вертикальный слайдер (vertical-slider)</a> - самописный вертикальный простой слайдер без использования библиотеки swiper
+
+##### Верстка
+
+Подключение в любом блоке, типа main.pug: ```include ../../components/vertical-slider/vertical-slider```
+
+##### CSS
+
+Подключение в ```_components.scss```: раскомментировать ```@import 'vertical-slider/vertical-slider';```
+
+###### JS
+
+Подключение в ```components.js```: раскомментировать```import "%components%/vertical-slider/vertical-slider";```.
+
 ### Слайдер Swiper с контентом, заходящим за край страницы и работающим скроллом и строкой скролла (slider-beyond)
 
 ##### Верстка
