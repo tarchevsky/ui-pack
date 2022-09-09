@@ -148,21 +148,16 @@ section, aside {
   display: grid;
   grid-template-columns: minmax(350px, auto) 1fr;
   gap: 0 $gap;
-
-  .content {
-    margin-inline-end: $ind;
-  }
+  height: 100%;
 }
 
-.sidebar {
-  position: relative;
-  height: 100%;
-  background-color: $disabled;
+// Сайдбар в layout-none
 
-  &__inner {
-    position: sticky;
-    inset-block-start: 0;
-    padding: $ind;
+.layout-none {
+  .content-sidebar {
+    .content {
+      margin-inline-end: $ind;
+    }
   }
 }
 
@@ -181,12 +176,17 @@ section, aside {
 }
 
 @media screen and (max-width: 768px) {
+  .layout {
+    &-none {
+      .content-sidebar {
+        .content {
+          margin-inline: $ind;
+        }
+      }
+    }
+  }
   .content-sidebar {
     grid-template-columns: 1fr;
-
-    .content {
-      margin-inline: $ind;
-    }
   }
 }
 
