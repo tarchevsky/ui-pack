@@ -8,14 +8,14 @@
   }
 
   &__caption {
-    text-align: left;
+    text-align: start;
     padding: 10px;
   }
 
   &__header, &__data {
     padding: 10px;
     border: $border;
-    text-align: left;
+    text-align: start;
   }
 }
 
