@@ -22,8 +22,7 @@ body {
  }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-block-start: $ind;
-  margin-block-end: $ind;
+  margin-block: $ind;
   letter-spacing: normal;
 }
 
@@ -52,13 +51,11 @@ h6 {
 }
 
 p {
-  margin-block-start: $ind;
-  margin-block-end: $ind;
+  margin-block: $ind;
 }
 
 ul {
-  margin-block-start: $ind;
-  margin-block-end: $ind;
+  margin-block: $ind;
   padding-inline-start: $ind;
 }
 
@@ -94,8 +91,7 @@ a {
 }
 
 blockquote {
-  margin-block-start: $ind;
-  margin-block-end: $ind;
+  margin-block: $ind;
   margin-inline: 0;
 }
 
@@ -118,13 +114,13 @@ section, aside {
   grid-template-rows: 80px minmax(75vh, 1fr) 80px;
   grid-template-columns: minmax(250px, $container);
   justify-content: center;
-  gap: $ind;
+  gap: $gap;
 }
 
 .layout {
   display: grid;
   grid-template-rows: 80px minmax(75vh, 1fr) 80px;
-  gap: $ind;
+  gap: $gap;
   margin-inline: $layout-margin;
 
   &-none {
@@ -135,13 +131,13 @@ section, aside {
 .row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: $ind;
+  gap: $gap;
 }
 
 .content {
   display: grid;
   grid-template-columns: minmax(200px, 1fr);
-  gap: $ind;
+  gap: $gap;
 }
 
 .content-sidebar {
