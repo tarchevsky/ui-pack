@@ -35,14 +35,16 @@
       inset-inline-start: $ind;
       margin-block: 0;
       opacity: 0;
+      font-size: 0;
     }
 
     &--active {
       flex: 10;
 
       h3 {
+        font-size: revert;
         opacity: 1;
-        transition: opacity $transition 0.3s;
+        transition: all 0.3s ease-in;
       }
     }
   }
