@@ -109,17 +109,16 @@ input[type='range'] {
   width: 100%;
 
   &__grid {
-    @include gap;
-
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
+    gap: $gap;
   }
 
   &__privacy, &__radio {
     display: flex;
     align-items: center;
-    gap: $ind;
+    gap: $gap;
 
     &--text {
       font-size: inherit;
