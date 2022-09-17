@@ -175,6 +175,38 @@ $darkgrey: #4C514A;
   background-color: $aquamarine;
 }
 
+.lightblue {
+  background-color: $lightblue;
+}
+
+.lightpurple {
+  background-color: $lightpurple;
+}
+.darkblue {
+  background-color: $darkblue;
+}
+.green {
+  background-color: $green;
+}
+.lightgreen {
+  background-color: $lightgreen;
+}
+.black {
+  background-color: $black;
+}
+.orange {
+  background-color: $orange;
+}
+.lightyellow {
+  background-color: $lightyellow;
+}
+.lightbrown {
+  background-color: $lightbrown;
+}
+.darkgrey {
+  background-color: $darkgrey;
+}
+```
 # Сетка (container, layout, content, sidebar, col, row)
 
 Сетка библиотеки построена на нескольких базовых принципах: скорость, легкость, доступность, унификация самых распространенных элементов на сайтах, адаптивность из коробки. На последнем остановимся.
