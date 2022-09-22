@@ -65,5 +65,5 @@ const slideBeyond = new Swiper(".slide-beyond.swiper", {
         1300: {
             slidesPerView: 4,
         }
-    }
+    },
 });
