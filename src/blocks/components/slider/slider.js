@@ -4,9 +4,7 @@ const slider = new Swiper(".slider", {
     slidesPerView: 1,
     spaceBetween: 20,
     speed: 200,
-    // Disable preloading of all images
     preloadImages: false,
-    // Enable lazy loading
     lazy: true,
     modules: [Navigation, Pagination, Mousewheel],
     pagination: {
@@ -46,17 +44,14 @@ const slideBeyond = new Swiper(".slide-beyond.swiper", {
     // Enable lazy loading
     lazy: true,
     modules: [Scrollbar, Mousewheel],
-
     scrollbar: {
         el: ".slide-beyond-scrollbar.swiper-scrollbar",
         // hide: true,
         draggable: true,
     },
-
     mousewheel: {
         invert: false,
     },
-
     breakpoints: {
         250: {
             slidesPerView: 1,
