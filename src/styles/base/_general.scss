@@ -95,11 +95,6 @@ blockquote {
   margin-inline: 0;
 }
 
-.disabled {
-  pointer-events: none;
-  color: $disabled;
-}
-
 section, aside {
   display: block;
   margin-block-start: $ind;
