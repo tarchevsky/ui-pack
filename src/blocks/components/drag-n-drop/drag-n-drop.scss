@@ -1,0 +1,73 @@
+.drag-n-drop {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-block: $ind;
+  padding-inline-start: $indmin;
+  white-space: nowrap;
+
+  &__row {
+    display: flex;
+    justify-content: flex-start;
+    gap: $ind;
+  }
+
+  &__title {
+    @include shadow;
+
+    align-self: center;
+    width: 200px;
+    padding: $indmin $ind;
+    background-color: $active-color;
+    color: #fff;
+    border-radius: 4px;
+    min-width: 240px;
+
+    &.start {
+      background-color: indianred;
+    }
+
+    &.progress {
+      background-color: lightslategray;
+    }
+
+    &.done {
+      background-color: darkseagreen;
+    }
+  }
+
+  &__placeholder {
+    margin-block-start: $indmin;
+    min-width: 240px;
+    height: 44px;
+  }
+
+  &__item {
+    min-width: 240px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgb(51 51 51 / 15%);
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    &--hold {
+      @include shadow;
+
+      border: 1px solid #eee;
+      border-radius: 2px;
+    }
+
+    &--hide {
+      display: none;
+    }
+
+    &--hovered {
+      border-top: 2px solid rgb(0 170 252 / 31%);
+    }
+  }
+}
