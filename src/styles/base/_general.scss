@@ -157,6 +157,15 @@ section, aside {
   }
 }
 
+// Класс выключено
+
+.disabled {
+  pointer-events: none;
+  color: $disabled;
+}
+
+// Цветовые схемы
+
 @media screen and (max-width: 1300px) {
   .container {
     padding: 0 $ind;
