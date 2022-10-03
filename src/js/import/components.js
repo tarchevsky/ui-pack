@@ -5,9 +5,9 @@ import "%components%/burger/burger";
 
 //! Other
 
+// import "%components%/modal/modal";
 // import "%components%/tabs/tabs";
 // import "%components%/dropdown/dropdown";
-// import "%components%/modal/modal";
 // import "%components%/gallery/gallery";
 // import "%components%/flex-gallery/flex-gallery";
 // import "%components%/slider/slider";
