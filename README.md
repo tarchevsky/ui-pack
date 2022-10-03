@@ -386,6 +386,7 @@ block header
 
 1. Swiper Slider (component slider)
 2. Fancybox (component gallery)
+3. Gsap
 
 Чтобы подключить скачанные вендорские скрипты, нужно вставить ```script(src="js/vendor.js")```
 
