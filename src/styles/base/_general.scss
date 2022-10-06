@@ -11,7 +11,7 @@ body {
   font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1rem);
   line-height: 24px;
   font-weight: 500;
-  letter-spacing: 0.1rem;
+  letter-spacing: normal;
   color: $base-color;
   background-color: #fff;
   scroll-behavior: smooth;
