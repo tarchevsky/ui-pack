@@ -113,6 +113,7 @@ section, aside {
 }
 
 .layout {
+  position: relative;
   display: grid;
   grid-template-rows: 80px minmax(75vh, 1fr) 80px;
   gap: $gap;
