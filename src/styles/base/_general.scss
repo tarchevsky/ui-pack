@@ -155,13 +155,6 @@ section, aside {
   }
 }
 
-// Класс выключено
-
-.disabled {
-  pointer-events: none;
-  color: $disabled;
-}
-
 // Цветовые схемы
 
 @media screen and (max-width: 1300px) {
@@ -197,6 +190,22 @@ section, aside {
   .layout, .row {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
+}
+
+// Класс выключено
+
+.disabled {
+  pointer-events: none;
+  color: $disabled;
+}
+
+// Класс вступительного текста
+
+.introductory {
+  font-family: serif;
+  line-height: normal;
+  padding-block-end: $ind;
+  border-bottom: $border;
 }
 
 // Стиль страницы 404
