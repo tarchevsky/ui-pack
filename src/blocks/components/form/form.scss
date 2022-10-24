@@ -19,7 +19,7 @@ input, textarea, select {
   border: $border;
   padding: $ind;
   transition: border $transition;
-  margin-block-start: $ind;
+  margin-block: $ind;
   outline: none;
   color: $base-color;
 
