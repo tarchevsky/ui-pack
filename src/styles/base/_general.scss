@@ -145,9 +145,11 @@ section, aside {
   height: 100%;
 }
 
-// Сайдбар в layout-none
+// layout-none и сайдбар layout-none
 
 .layout-none {
+  padding-inline: $layout-margin;
+  // Сайдбар в layout-none
   .content-sidebar {
     .content {
       margin-inline-end: $ind;
@@ -163,10 +165,11 @@ section, aside {
   }
 
   .layout {
-    margin-inline: 2vw;
+    margin-inline: $layout-margin-mob;
 
     &-none {
-      margin-inline: -2vw;
+      margin-inline: -$layout-margin-mob;
+      padding-inline: $layout-margin-mob;
     }
   }
 }

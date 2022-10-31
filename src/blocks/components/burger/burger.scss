@@ -76,7 +76,7 @@
 
   .layout-none {
     .burger {
-      inset-inline-end: 2vw;
+      inset-inline-end: $layout-margin-mob;
     }
   }
 }
