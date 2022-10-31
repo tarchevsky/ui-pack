@@ -73,4 +73,10 @@
   .burger {
     display: block;
   }
+
+  .layout-none {
+    .burger {
+      inset-inline-end: 2vw;
+    }
+  }
 }
