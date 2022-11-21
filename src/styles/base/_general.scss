@@ -130,6 +130,13 @@ section, aside {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: $gap;
+
+  &__content {
+    display: flex;
+    gap: $ind;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 .content {
@@ -182,6 +189,11 @@ section, aside {
           margin-inline: $ind;
         }
       }
+    }
+  }
+  .row {
+    &__content {
+      flex-wrap: wrap;
     }
   }
   .content-sidebar {
