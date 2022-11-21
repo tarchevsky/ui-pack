@@ -14,10 +14,10 @@ import "%components%/burger/burger";
 // import "%components%/show-more/show-more";
 // import "%components%/tabs-tags/tabs-tags";
 // import "%components%/circle/circle";
-// import "%components%/quiz/quiz";
-// import "%components%/like/like";
 
 // import "%components%/infinite-scroll/infinite-scroll";
+// import "%components%/quiz/quiz";
+// import "%components%/like/like";
 // import "%components%/vertical-slider/vertical-slider";
 // import "%components%/dropdown/dropdown";
 // import "%components%/dropdown-lang/dropdown-lang";
