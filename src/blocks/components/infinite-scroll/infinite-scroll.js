@@ -1,41 +1,41 @@
-const post = {
-    img: "img/img.jpg",
-};
+let container = document.querySelector(".infinite-scroll");
+let nextPage = 2;
 
-const server = {
-    posts(page = 1) {
-        const finished = page >= 5;
-        const next = finished ? null : page + 1;
-        const posts = Array(5).fill(post);
+const infiniteObserver = new IntersectionObserver(
+    ([entry], observer) => {
+        if (entry.isIntersecting) {
+            observer.unobserve(entry.target);
 
-        return new Promise ((resolve => {
-            setTimeout(() => {
-                resolve({posts, next});
-            }, 150);
-        }));
+            loadPosts(nextPage++);
+        }
     },
+    {
+        threshold: 0,
+    },
+);
+
+const loadPosts = (page = 1) => {
+    fetch(`https://my-json-server.typicode.com/tarchevsky/demo-json-db/horses?_limit=4&_page=${page}`)
+        .then(res => res.json())
+        .then(posts => {
+            posts.forEach(post => {
+                const card = document.createElement("div");
+                card.className = "infinite-scroll-card";
+                card.innerHTML = `
+                    <img src="${post.url}" alt="">
+                    <p>${post.title}</p>
+                `;
+                container.append(card);
+            });
+
+            // TODO observer logic
+            const lastCard = document.querySelector(".infinite-scroll-card:last-child");
+
+            if (lastCard) {
+                infiniteObserver.observe(lastCard);
+            }
+        })
+        .catch(console.error);
 };
 
-const response = await server.posts();
-
-function checkPosition() {
-    const height = document.body.offsetHeight;
-    const screenHeight = window.innerHeight;
-    const scrolled = window.scrollY;
-
-    const threshold = height - screenHeight / 4;
-    const position = scrolled + screenHeight;
-
-    if(position >= threshold) {
-        await fetchPosts();
-    }
-};
-
-(() => {
-    window.addEventListener('scroll', checkPosition);
-    window.addEventListener('resize', checkPosition);
-})();
-
-async function fetchPosts() {
-    const { posts, next } = await server.posts(nextPage);
-}
+loadPosts();
