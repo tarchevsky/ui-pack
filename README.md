@@ -476,6 +476,30 @@ data-alt создан для того, чтобы при загрузке стр
 
 ### <a name="modal">Модальное окно (modal)</a>
 
+##### Верстка
+
+Для подключения добавьте в default.pug ниже ```block footer``` - ```block modal```. Затем в код страницы, например *index.pug*:
+
+```jade
+block footer
+    include ../blocks/modules/footer/footer
+      
+block modal
+    include ../blocks/components/modal/modal
+
+block scripts...
+```
+
+Для того, чтобы **добавить кнопку активации** модального окна, поместите атрибут ```data-modal``` к любой ссылке или кнопке на странице
+
+##### CSS
+
+Подключение в ```_components.scss```: добавить строчку ```@import 'modal/modal';```
+
+###### JS
+
+Подключение в ```components.js```: добавить```import "%components%/modal/modal";```.
+
 ### <a name="infinite-scroll">Бесконечная прокрутка контента (infinite-scroll)</a>
 
 Для того, чтобы встроить плагин в проект:
