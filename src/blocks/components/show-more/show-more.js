@@ -1,6 +1,13 @@
-const showMoreButtons = document.querySelectorAll(".show-more__button"),
+const showMore = document.querySelector(".show-more"),
+    showMoreButtons = document.querySelectorAll(".show-more__button"),
     showMoreContent = document.querySelectorAll(".show-more__content"),
     showMoreParent = document.querySelector(".show-more__row");
+
+if (showMore) {
+    showMoreHideContent();
+    clickShowMore();
+    window.addEventListener("resize", () => resizeContent(showMoreContent));
+}
 
 function showMoreHideContent() {
     showMoreContent.forEach(item => {
@@ -20,8 +27,6 @@ function showMoreHideContent() {
     });
 
 }
-
-showMoreHideContent();
 
 function showMoreShowContent(i) {
 
@@ -53,8 +58,6 @@ function clickShowMore() {
     });
 }
 
-clickShowMore();
-
 function resizeContent(content) {
     content.forEach((item, i) => {
         if (parseInt(content[i].style.maxHeight) !== content[i].scrollHeight) {
@@ -62,5 +65,3 @@ function resizeContent(content) {
         }
     });
 }
-
-window.addEventListener("resize", () => resizeContent(showMoreContent));

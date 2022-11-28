@@ -1,3 +1,4 @@
+const infiniteScroll = document.querySelector(".infinite-scroll");
 let container = document.querySelector(".infinite-scroll");
 let nextPage = 2;
 
@@ -15,7 +16,7 @@ const infiniteObserver = new IntersectionObserver(
 );
 
 const loadPosts = (page = 1) => {
-    fetch(`https://my-json-server.typicode.com/tarchevsky/demo-json-db/horses?_limit=4&_page=${page}`)
+    fetch(`https://my-json-server.typicode.com/tarchevsky/demo-json-db/posts?_limit=4&_page=${page}`)
         .then(res => res.json())
         .then(posts => {
             posts.forEach(post => {
@@ -38,4 +39,6 @@ const loadPosts = (page = 1) => {
         .catch(console.error);
 };
 
-loadPosts();
+if (infiniteScroll) {
+    loadPosts();
+}

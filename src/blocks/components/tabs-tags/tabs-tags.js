@@ -1,6 +1,14 @@
-const tabsTagsParent = document.querySelector(".tabs-tags__row"),
+const tabsTags = document.querySelector(".tabs-tags"),
+    tabsTagsParent = document.querySelector(".tabs-tags__row"),
     tabsTagsButton = document.querySelectorAll(".tabs-tags__button"),
     tabsTagsItem = document.querySelectorAll(".tabs-tags__item");
+
+if (tabsTags) {
+    tabsTagsHideContent();
+    tabsTagsShowContent();
+    tabsTagsTabActivation();
+    window.addEventListener("resize", () => resizeContent(tabsTagsItem));
+}
 
 function tabsTagsHideContent() {
     tabsTagsButton.forEach((item) => {
@@ -17,16 +25,12 @@ function tabsTagsHideContent() {
     });
 }
 
-tabsTagsHideContent();
-
 function tabsTagsShowContent(i = 0) {
     tabsTagsItem[i].style.display = "block";
     tabsTagsButton[i].classList.add("active");
     tabsTagsItem[i].classList.add("tabs-tags__item--active");
     tabsTagsItem[i].style.maxHeight = `${tabsTagsItem[i].scrollHeight}px`;
 }
-
-tabsTagsShowContent();
 
 function tabsTagsTabActivation() {
     tabsTagsParent.addEventListener("click", (e) => {
@@ -43,8 +47,6 @@ function tabsTagsTabActivation() {
     });
 }
 
-tabsTagsTabActivation();
-
 function resizeContent(content) {
     content.forEach((item, i) => {
         if (parseInt(content[i].style.maxHeight) !== content[i].scrollHeight) {
@@ -52,5 +54,3 @@ function resizeContent(content) {
         }
     });
 }
-
-window.addEventListener("resize", () => resizeContent(tabsTagsItem));

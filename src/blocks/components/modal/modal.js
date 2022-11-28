@@ -1,31 +1,37 @@
-const modalTrigger = document.querySelectorAll("[data-modal]"),
-    modal = document.querySelector(".modal"),
+const modal = document.querySelector(".modal"),
+    modalTrigger = document.querySelectorAll("[data-modal]"),
     modalCloseBtn = document.querySelector("[data-close]");
 
-modalTrigger.forEach(btn => {
-    btn.addEventListener("click", () => {
-        modal.classList.add("modal__show");
-        modal.classList.remove("modal__hide");
-        document.body.style.overflow = "hidden";
-    });
-});
-
-function closeModal() {
-    modal.classList.add("modal__hide");
-    modal.classList.remove("modal__show");
-    document.body.style.overflow = "";
+if (modal) {
+    modalScripts();
 }
 
-modalCloseBtn.addEventListener("click", closeModal);
+function modalScripts() {
+    modalTrigger.forEach(btn => {
+        btn.addEventListener("click", () => {
+            modal.classList.add("modal__show");
+            modal.classList.remove("modal__hide");
+            document.body.style.overflow = "hidden";
+        });
+    });
 
-modal.addEventListener("click", (event) => {
-    if (event.target === modal) {
-        closeModal();
+    function closeModal() {
+        modal.classList.add("modal__hide");
+        modal.classList.remove("modal__show");
+        document.body.style.overflow = "";
     }
-});
 
-document.addEventListener("keydown", (event) => {
-    if(event.code === "Escape" && modal.classList.contains("modal__show")) {
-        closeModal();
-    }
-});
+    modalCloseBtn.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if(event.code === "Escape" && modal.classList.contains("modal__show")) {
+            closeModal();
+        }
+    });
+}

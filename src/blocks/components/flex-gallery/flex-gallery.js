@@ -1,3 +1,9 @@
+const flexGallery = document.querySelector(".flex-gallery");
+
+if (flexGallery) {
+    fgSlidesPlugin();
+}
+
 function fgSlidesPlugin(activeSlide = 1) {
     const fgSlides = document.querySelectorAll(".flex-gallery__slide");
 
@@ -19,5 +25,3 @@ function fgSlidesPlugin(activeSlide = 1) {
         });
     }
 }
-
-fgSlidesPlugin();

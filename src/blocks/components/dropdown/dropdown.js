@@ -1,3 +1,5 @@
+const dropdownExist = document.querySelector(".dropdown");
+
 function dropdown(dropdown, items, dropdownActive) {
     function dropdownRemove() {
         items.style.color = "";
@@ -34,4 +36,6 @@ function dropdown(dropdown, items, dropdownActive) {
 const dropDown = document.querySelector(".dropdown"),
     dropDownOptions = document.querySelector(".dropdown__items");
 
-dropdown(dropDown, dropDownOptions, "dropdown--active");
+if (dropdownExist) {
+    dropdown(dropDown, dropDownOptions, "dropdown--active");
+}

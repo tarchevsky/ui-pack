@@ -1,8 +1,11 @@
-const parent = document.querySelector(".tabs"),
+const tabs = document.querySelector(".tabs"),
     panelItem = document.querySelectorAll(".tabs-panel__item"),
-    panelItemActive = document.querySelector(".tabs-panel__item--active"),
-    contentItem = document.querySelectorAll(".tabs-content__item"),
-    contentItemActive = document.querySelector(".tabs-content__item--active");
+    contentItem = document.querySelectorAll(".tabs-content__item");
+
+if (tabs) {
+    showContent();
+    tabsTagsTabActivation();
+}
 
 function hideContent() {
     panelItem.forEach((item) => {
@@ -20,10 +23,8 @@ function showContent(i = 0) {
     contentItem[i].classList.add("tabs-content__item--active");
 }
 
-showContent();
-
 function tabsTagsTabActivation() {
-    parent.addEventListener("click", (e) => {
+    tabs.addEventListener("click", (e) => {
         const target = e.target;
 
         if (target && target.classList.contains("tabs-panel__item") && !target.classList.contains("tabs-panel__item--active")) {
@@ -36,5 +37,3 @@ function tabsTagsTabActivation() {
         }
     });
 }
-
-tabsTagsTabActivation();
