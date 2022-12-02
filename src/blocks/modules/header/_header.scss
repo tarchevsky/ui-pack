@@ -51,7 +51,7 @@
       inset-inline-end: 0;
       inset-block-end: 0;
       transform: translateY(-100%);
-      background-color: $contrast-color;
+      background-color: transparent;
       opacity: 0;
       transition: all $transition;
 
@@ -68,6 +68,7 @@
         display: block;
         text-align: center;
         color: #fff;
+        opacity: 0;
 
         a {
           &:hover {
@@ -78,7 +79,12 @@
 
       &--active {
         opacity: 1;
+        background-color: $contrast-color;
         transform: translateY(0);
+
+        .header-menu__item {
+          opacity: 1;
+        }
       }
     }
   }
