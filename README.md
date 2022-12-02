@@ -64,7 +64,6 @@
   - [Мультиязыковое меню + мини-плагин локализации для небольших сайтов](#dropdown-lang)
   - [Слайдер Swiper c базовыми стилями и настройками](#slider)
   - [Слайдер Swiper с контентом, заходящим за край страницы и со скроллбаром](#slide-beyond)
-  - [Вертикальный слайдер (vertical-slider)](#vertical-slider) - самописный вертикальный простой слайдер без использования библиотеки swiper
   - [Табы](#tabs)
   - [Табы в виде тегов](#tabs-tags)
   - [Хлебные крошки](#breadcrumbs)
@@ -557,20 +556,6 @@ block scripts...
 ###### JS
 
 Подключение в ```components.js```: раскомментировать```import "%components%/slider/slider";```.
-
-### <a name="vertical-slider">Вертикальный слайдер (vertical-slider)</a> - самописный вертикальный простой слайдер без использования библиотеки swiper
-
-##### Верстка
-
-Подключение в любом блоке, типа main.pug: ```include ../../components/vertical-slider/vertical-slider```
-
-##### CSS
-
-Подключение в ```_components.scss```: раскомментировать ```@import 'vertical-slider/vertical-slider';```
-
-###### JS
-
-Подключение в ```components.js```: раскомментировать```import "%components%/vertical-slider/vertical-slider";```.
 
 ### Табы в виде тегов (tabs-tags)
 
