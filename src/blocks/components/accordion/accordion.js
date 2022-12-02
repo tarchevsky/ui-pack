@@ -55,7 +55,7 @@ function accordionBasic(i, heading, icon, content, headingActive, iconActive, co
 function resizeContent() {
     const accordionContentActive = document.querySelector(".accordion__content--active");
 
-    if (parseInt(accordionContentActive.style.maxHeight) !== accordionContentActive.scrollHeight) {
+    if (accordionContentActive && parseInt(accordionContentActive.style.maxHeight) !== accordionContentActive.scrollHeight) {
         accordionContentActive.style.maxHeight = `${accordionContentActive.scrollHeight}px`;
     }
 }
