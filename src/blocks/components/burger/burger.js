@@ -8,13 +8,15 @@ function burgerScripts() {
     const headerMenu = document.querySelector(".header-menu"),
         burgerInner = burger.querySelector(".burger__inner"),
         menuItem = document.querySelectorAll(".header-menu__item");
-    // dropDown = document.querySelector(".dropdown"),
-    // dropItems = document.querySelector(".dropdown__items"),
-    // dropItem = document.querySelectorAll(".dropdown__item");
+
+    // const dropDown = document.querySelector(".dropdown"),
+    //     dropItems = document.querySelector(".dropdown__items"),
+    //     dropItem = document.querySelectorAll(".dropdown__item");
 
     burgerListener();
     burgerCloseKeyDown();
     menuItemIteration();
+
     // dropdownInBurger(dropItem, dropItems);
 
     function overflowMenu () {
@@ -35,7 +37,9 @@ function burgerScripts() {
         burger.addEventListener("click", () => {
             headerMenu.classList.toggle("header-menu--active");
             burgerInner.classList.toggle("burger__inner--active");
+
             // dropDown.classList.add("dropdown-burger");
+
             overflowMenu();
         });
     }
@@ -58,17 +62,14 @@ function burgerScripts() {
         });
     }
 
-
-
-// function dropdownInBurger(dropdownItem, dropDownItems) {
-//     dropdownItem.forEach((item) => {
-//         item.addEventListener("click", () => {
-//             removeMenuActive();
-//             dropDownItems.style.display = "none";
-//         });
-//     });
-// }
-//
+    // function dropdownInBurger(dropdownItem, dropDownItems) {
+    //     dropdownItem.forEach((item) => {
+    //         item.addEventListener("click", () => {
+    //             removeMenuActive();
+    //             dropDownItems.style.display = "none";
+    //         });
+    //     });
+    // }
 }
 
 
