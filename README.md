@@ -111,17 +111,53 @@
 
 Сейчас на сайте лишь шапка и подвал.
 
-Для того, чтобы увидеть демо-контент, зайдите в файловую систему библиотеку, а именно папку ```src``` - именно с ней вы будете работать, но чуть позже.
+Вы можете подключить демо набор блоков. Для этого зайдите в файловую систему, найдите папку ```src```.
 
-Сейчас просто перейдите по написанному путю: ```./src/views/index.pug``` и откройте файл index.pug.
+##### Верстка
 
-Найдите строчку ```include ../blocks/modules/main/main``` и ниже вставьте ```
-include ../blocks/modules/demo/demo```.
+Затем пройдите внутрь по пути: ```./src/views``` и откройте файл *index.pug*.
 
-Также раскомментируйте все строки в файлах:
+Найдите строчку ```include ../blocks/modules/main/main``` и ниже вставьте 
+```jade
+include ../blocks/modules/demo/demo
+```
 
-```./src/blocks/components/components.scss```,
+##### CSS
+
+Чтобы подключить стили demo-блоков, откройте:
+```./src/blocks/components/_components.scss```
+и под комментарием ```// ! Other``` вставьте данные строки:
+
+```scss
+@import 'tabs/tabs';
+@import 'gallery/gallery';
+@import 'flex-gallery/flex-gallery';
+@import 'slider/slider';
+@import 'accordion/accordion';
+@import 'show-more/show-more';
+@import 'tabs-tags/tabs-tags';
+@import 'breadcrumbs/breadcrumbs';
+@import 'circle/circle';
+@import 'container-beyond/container-beyond';
+@import 'dropdown/dropdown';
+```
+
+###### JS
+
+Чтобы подключить скрипты demo-блоков, откройте:
 ```./src/js/import/components.js```
+и под комментарием ```// ! Other``` вставьте данные строки:
+```javascript
+import "%components%/tabs/tabs";
+import "%components%/gallery/gallery";
+import "%components%/flex-gallery/flex-gallery";
+import "%components%/slider/slider";
+import "%components%/accordion/accordion";
+import "%components%/show-more/show-more";
+import "%components%/tabs-tags/tabs-tags";
+import "%components%/circle/circle";
+import "%components%/dropdown/dropdown";
+```
 
 # <a name="styles">Базовые стили и разметка</a>
 ### <a name="scss-variables">Переменные SCSS</a>
