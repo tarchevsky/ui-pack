@@ -1,3 +1,0 @@
-# Вызов
-
-```button(data-modal)```
