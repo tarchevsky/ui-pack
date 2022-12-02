@@ -1,43 +1,54 @@
-summary {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  outline: none;
-  padding-inline-end: $ind;
-  padding-block: 20px;
-  border-bottom: $border;
-  cursor: pointer;
+.accordion {
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    outline: none;
+    padding-inline-end: $ind;
+    padding-block: 20px;
+    border-bottom: $border;
+    background-color: #f8f8f8;
+    cursor: pointer;
 
-  &::marker {
-    display: none;
+    svg {
+      align-self: center;
+      justify-self: center;
+      width: 20px;
+      height: 20px;
+      transform: rotate(0deg);
+      transition: all $transition;
+    }
+
+    p {
+      display: block;
+      margin-block-start: $ind;
+      padding-inline-end: $ind;
+    }
+
+    .accordion__icon--active {
+      transform: rotate(180deg);
+    }
   }
 
-  svg {
-    align-self: center;
-    justify-self: center;
-    width: 20px;
-    height: 20px;
-    transform: rotate(0deg);
-    transition: all $transition;
-  }
-}
-
-details {
-  summary, p {
+  &__heading, p {
     padding-inline-start: $ind;
   }
 
-  p {
-    display: block;
-    margin-block-start: $ind;
-    padding-inline-end: $ind;
+  &__title {
+    font-size: calc(100% + 0.4vw);
   }
-}
 
-.accordion {
-  &__icon {
-    &--active {
-      transform: rotate(180deg);
-    }
+  &__content {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-80px);
+    transition: all 0.9s;
+  }
+
+  .accordion__content--active {
+    transform: translateY(0);
+    transition: all 0.9s;
   }
 }
