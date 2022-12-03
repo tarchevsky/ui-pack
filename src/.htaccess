@@ -1,3 +1,8 @@
+# www to /
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
 # http to https
 
 # RewriteEngine On
