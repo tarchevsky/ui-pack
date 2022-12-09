@@ -1,20 +1,20 @@
-const dropdownExist = document.querySelector(".dropdown");
+const dropdownExist = document.querySelector('.dropdown');
 
 function dropdown(dropdown, items, dropdownActive) {
     function dropdownRemove() {
-        items.style.color = "";
+        items.style.color = '';
         setTimeout(function () {
-            items.style.maxHeight = "0";
+            items.style.maxHeight = '0';
         }, 400);
         setTimeout(function () {
-            items.style.display = "none";
+            items.style.display = 'none';
         }, 600);
     }
 
     function dropdownHideShow() {
 
-        dropdown.addEventListener("mouseenter", (dropdownEvent));
-        dropdown.addEventListener("mouseleave", (dropdownEvent));
+        dropdown.addEventListener('mouseenter', (dropdownEvent));
+        dropdown.addEventListener('mouseleave', (dropdownEvent));
 
         function dropdownEvent() {
             dropdown.classList.toggle(dropdownActive);
@@ -22,10 +22,10 @@ function dropdown(dropdown, items, dropdownActive) {
             if (!dropdown.classList.contains(dropdownActive)) {
                 dropdownRemove(items);
             } else {
-                items.style.display = "block";
+                items.style.display = 'block';
                 items.style.maxHeight = `${items.scrollHeight}px`;
                 setTimeout(() => {
-                    items.style.color = "#fff";
+                    items.style.color = '#fff';
                 }, 100);
             }
         }
@@ -33,9 +33,9 @@ function dropdown(dropdown, items, dropdownActive) {
     dropdownHideShow();
 }
 
-const dropDown = document.querySelector(".dropdown"),
-    dropDownOptions = document.querySelector(".dropdown__items");
+const dropDown = document.querySelector('.dropdown'),
+    dropDownOptions = document.querySelector('.dropdown__items');
 
 if (dropdownExist) {
-    dropdown(dropDown, dropDownOptions, "dropdown--active");
+    dropdown(dropDown, dropDownOptions, 'dropdown--active');
 }

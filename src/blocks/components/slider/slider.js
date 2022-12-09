@@ -1,5 +1,5 @@
-import Swiper, { Navigation, Pagination, Scrollbar, Mousewheel } from "swiper";
-const slider = new Swiper(".slider", {
+import Swiper, { Navigation, Pagination, Scrollbar, Mousewheel } from 'swiper';
+const slider = new Swiper('.slider', {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 20,
@@ -8,12 +8,12 @@ const slider = new Swiper(".slider", {
     lazy: true,
     modules: [Navigation, Pagination, Mousewheel],
     pagination: {
-        el: ".slider-pagination.swiper-pagination",
+        el: '.slider-pagination.swiper-pagination',
         clickable: true,
     },
     navigation: {
-        nextEl: ".slider-button-next.swiper-button-next",
-        prevEl: ".slider-button-prev.swiper-button-prev",
+        nextEl: '.slider-button-next.swiper-button-next',
+        prevEl: '.slider-button-prev.swiper-button-prev',
     },
     // mousewheel: {
     //     invert: true,
@@ -36,7 +36,7 @@ const slider = new Swiper(".slider", {
     //     }
     // }
 });
-const slideBeyond = new Swiper(".slide-beyond.swiper", {
+const slideBeyond = new Swiper('.slide-beyond.swiper', {
     slidesPerView: 3,
     spaceBetween: 20,
     // Disable preloading of all images
@@ -45,7 +45,7 @@ const slideBeyond = new Swiper(".slide-beyond.swiper", {
     lazy: true,
     modules: [Scrollbar, Mousewheel],
     scrollbar: {
-        el: ".slide-beyond-scrollbar.swiper-scrollbar",
+        el: '.slide-beyond-scrollbar.swiper-scrollbar',
         // hide: true,
         draggable: true,
     },

@@ -1,5 +1,5 @@
-const infiniteScroll = document.querySelector(".infinite-scroll");
-let container = document.querySelector(".infinite-scroll");
+const infiniteScroll = document.querySelector('.infinite-scroll');
+let container = document.querySelector('.infinite-scroll');
 let nextPage = 2;
 
 const infiniteObserver = new IntersectionObserver(
@@ -20,17 +20,17 @@ const loadPosts = (page = 1) => {
         .then(res => res.json())
         .then(posts => {
             posts.forEach(post => {
-                const card = document.createElement("div");
-                card.className = "infinite-scroll-card";
+                const card = document.createElement('div');
+                card.className = 'infinite-scroll-card';
                 card.innerHTML = `
-                    <img src="${post.url}" alt="">
+                    <img src='${post.url}' alt=''>
                     <p>${post.title}</p>
                 `;
                 container.append(card);
             });
 
             // TODO observer logic
-            const lastCard = document.querySelector(".infinite-scroll-card:last-child");
+            const lastCard = document.querySelector('.infinite-scroll-card:last-child');
 
             if (lastCard) {
                 infiniteObserver.observe(lastCard);

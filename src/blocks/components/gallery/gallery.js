@@ -1,4 +1,4 @@
-import { Fancybox } from "@fancyapps/ui";
+import { Fancybox } from '@fancyapps/ui';
 
 Fancybox.bind('[data-fancybox="gallery"]', {
     Thumbs: false,
@@ -7,6 +7,6 @@ Fancybox.bind('[data-fancybox="gallery"]', {
     Image: {
         zoom: false,
         click: false,
-        wheel: "slide",
+        wheel: 'slide',
     },
 });
