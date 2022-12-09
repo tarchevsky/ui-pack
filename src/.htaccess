@@ -5,9 +5,9 @@ RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
 
 # http to https
 
-# RewriteEngine On
-# RewriteCond %{SERVER_PORT} !^443$
-# RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 
 # Slash redirect
 
