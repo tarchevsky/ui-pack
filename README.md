@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/licence-GPL--3.0-yellowgreen)
 
-## <a name="target">Назначение репозитория</a>
+## <a name="target">Назначение репозитория / библиотеки</a>
 
 ### Если просто
 
