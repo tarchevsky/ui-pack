@@ -723,7 +723,21 @@ include ../components/dropdown/dropdown
 
 ##### CSS
 
-Подключение в `_components.scss`: раскомментировать `@import 'slider/slider';`
+Подключение в `_components.scss`: добавить `@import 'slider/slider'`
+
+Также есть дефолтные стили swiper, которые находятся в `./src/styles/vendor/_libs.sass`, в этом файле надо раскомменитровать строку `@import 'import/swiper'`.
+
+###### JS
+
+Сперва проверяем, что в index.pug или любом другом файле страницы в скриптах, выше main.js есть:
+
+```pug
+script(src='js/vendor.js')
+```
+
+В этом файле находятся импорты подгружаемых сторонних библиотек.
+
+Затем подключаем в `components.js`: `import "%components%/slider/slider";`.
 
 ###### Слайды, заходящие за границы (частичный показ изображений)
 
@@ -748,10 +762,6 @@ include ../components/dropdown/dropdown
 Компонент ещё не доработан, но на дефолтных margin .layout и с `slidesPerView: 4`, верное значение margin-inline `.layout-none__slider`: -4.5vw.
 
 Поиграйтесь со значениями. Они зависят ещё и от spaceBetween swiper.
-
-###### JS
-
-Подключение в `components.js`: раскомментировать`import "%components%/slider/slider";`.
 
 ##### <a name="slide-beyond">Слайдер Swiper с контентом, заходящим за край страницы и со скроллбаром (slide-beyond)</a>
 
