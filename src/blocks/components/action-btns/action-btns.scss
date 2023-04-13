@@ -18,6 +18,7 @@
 			width: 20px;
 			height: 20px;
 			cursor: pointer;
+			fill: $black;
 			transform: translate(-44%, -50%) rotate(180deg);
 
 			&:hover.action-btns-up {
@@ -36,7 +37,7 @@
 			width: 15px;
 			height: 15px;
 			cursor: pointer;
-			fill: $base-color;
+			fill: $black;
 
 			&:hover.action-btns-call {
 				background-color: $hover-color;
@@ -80,7 +81,7 @@
 
 				.arrow,
 				.phone {
-					fill: $hover-color;
+					fill: $white;
 				}
 			}
 		}
