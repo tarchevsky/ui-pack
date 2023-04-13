@@ -707,9 +707,13 @@ include ../components/dropdown/dropdown
 
 ### <a name="slider">Слайдер Swiper c базовыми стилями и настройками (slider)</a>
 
-> Внимание! Не помещайте слайдер в grid и flex-контейнеры, либо дорабатывайте слайдер под свои задачи
+Подключение внутри, например, модуля main:
 
-### <a name="slide-beyond">Слайдер Swiper с контентом, заходящим за край страницы и со скроллбаром (slide-beyond)</a>
+`include ../../components/slider/slider`
+
+Если слайдер используется в нескольких местах, просто берите код компонента и переиспользуя его в разной обёртке - пока это базовый способ взаимодействия.
+
+> Внимание! Не помещайте слайдер в grid и flex-контейнеры, либо дорабатывайте слайдер под свои задачи
 
 ##### Верстка
 
@@ -721,9 +725,35 @@ include ../components/dropdown/dropdown
 
 Подключение в `_components.scss`: раскомментировать `@import 'slider/slider';`
 
+###### Слайды, заходящие за границы (частичный показ изображений)
+
+Бывают такие случаи, когда нам нужен такой слайдер. Для этого предусмотрен класс `.layout-none__slider`, он работает в связке с .layout-none и конечно же, его нужно использовать при сетке, построенной не на .container, а на `.layout`.
+
+Для этого добавьте к контейнеру слайдера (пример: .`slider.swiper#slider`) - `.layout-none.layout-none___slider`, получится:
+
+```pug
+.slider.swiper#slider.layout-none.layout-none__slider
+  .slider-wrapper.swiper-wrapper
+      .slider-slide.swiper-slide
+          img(src='img/img.webp')
+      .slider-slide.swiper-slide
+          img(src='img/img.webp')
+  .slider-navigation
+      .slider-pagination.swiper-pagination#slider-pagination
+      .slider-button-prev.swiper-button-prev
+      .slider-button-next.swiper-button-next
+      ...
+```
+
+Компонент ещё не доработан, но на дефолтных margin .layout и с `slidesPerView: 4`, верное значение margin-inline `.layout-none__slider`: -4.5vw.
+
+Поиграйтесь со значениями. Они зависят ещё и от spaceBetween swiper.
+
 ###### JS
 
 Подключение в `components.js`: раскомментировать`import "%components%/slider/slider";`.
+
+##### <a name="slide-beyond">Слайдер Swiper с контентом, заходящим за край страницы и со скроллбаром (slide-beyond)</a>
 
 ### Табы в виде тегов (tabs-tags)
 

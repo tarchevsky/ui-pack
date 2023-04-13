@@ -132,6 +132,10 @@ aside {
 
 	&-none {
 		margin-inline: -$layout-margin;
+
+		&__slider {
+			margin-inline: -4.5vw;
+		}
 	}
 }
 
