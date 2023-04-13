@@ -2,12 +2,12 @@ mixin sprite(name, href)
     svg(class=name)
         use(xlink:href=href)
 
-mixin picture(srcset, src, alt)
-    picture
+mixin picture(srcset, src, alt, className)
+    picture(class=className)
         source(srcset=srcset)
         img(src=src alt=alt)
 
-mixin picture-lazy(srcset, src, alt)
-    picture
+mixin picture-lazy(srcset, src, alt, className)
+    picture(class=className)
         source(data-srcset=srcset)
         img(data-src=src data-alt=alt)
