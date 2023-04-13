@@ -1,237 +1,248 @@
-*, *:before, *:after {
-  box-sizing: border-box;
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
 }
 
 html {
-  position: relative;
+	position: relative;
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
-  font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1rem);
-  line-height: 24px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  color: $base-color;
-  background-color: #fff;
-  scroll-behavior: smooth;
+	font-family: 'Raleway', sans-serif;
+	font-size: clamp(0.8rem, 1.2vw + 0.2rem, 1rem);
+	line-height: 24px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	color: $base-color;
+	background-color: #fff;
+	scroll-behavior: smooth;
 }
 
 ::selection {
-   background: rgba(189, 189, 189, 0.54);
- }
+	background: rgba(189, 189, 189, 0.54);
+}
 
-h1, h2, h3, h4, h5, h6 {
-  margin-block: $ind;
-  letter-spacing: normal;
-  line-height: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-block: $ind;
+	letter-spacing: normal;
+	line-height: normal;
 }
 
 h1 {
-  font-size: revert;
+	font-size: revert;
 }
 
 h2 {
-  font-size: revert;
+	font-size: revert;
 }
 
 h3 {
-  font-size: revert;
+	font-size: revert;
 }
 
 h4 {
-  font-size: revert;
+	font-size: revert;
 }
 
 h5 {
-  font-size: revert;
+	font-size: revert;
 }
 
 h6 {
-  font-size: revert;
+	font-size: revert;
 }
 
 p {
-  margin-block: $ind;
+	margin-block: $ind;
 }
 
 ul {
-  margin-block: $ind;
-  padding-inline-start: $ind;
+	margin-block: $ind;
+	padding-inline-start: $ind;
 }
 
 li {
-  list-style: none;
+	list-style: none;
 
-  &:before {
-    display: inline-block;
-    content: '';
-    position: relative;
-    left: -10px;
-    top: -3px;
-    height: 3px;
-    width: 3px;
-    background-color: $base-color;
-    border-radius: 100%;
-  }
+	&:before {
+		display: inline-block;
+		content: '';
+		position: relative;
+		left: -10px;
+		top: -3px;
+		height: 3px;
+		width: 3px;
+		background-color: $base-color;
+		border-radius: 100%;
+	}
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
-  border-bottom: $border;
-  transition: color $transition;
+	text-decoration: none;
+	color: inherit;
+	border-bottom: $border;
+	transition: color $transition;
 
-  :visited {
-    color: rgba(51, 51, 51, 0.66);
-  }
+	:visited {
+		color: rgba(51, 51, 51, 0.66);
+	}
 
-  &:hover {
-    color: $accent-color;
-  }
+	&:hover {
+		color: $accent-color;
+	}
 }
 
 blockquote {
-  margin-block: $ind;
-  margin-inline: 0;
-  line-height: normal;
+	margin-block: $ind;
+	margin-inline: 0;
+	line-height: normal;
 }
 
-section, aside {
-  display: block;
-  margin-block-start: $ind;
+section,
+aside {
+	display: block;
+	margin-block-start: $ind;
 }
 
-.container, .layout {
-  margin: 0 auto;
+.container,
+.layout {
+	margin: 0 auto;
 }
 
 .container {
-  display: grid;
-  grid-template-rows: 80px minmax(75vh, 1fr) 80px;
-  grid-template-columns: minmax(250px, $container);
-  justify-content: center;
-  gap: $gap;
+	display: grid;
+	grid-template-rows: auto minmax(75vh, 1fr) auto;
+	grid-template-columns: minmax(250px, $container);
+	justify-content: center;
+	gap: $gap;
 }
 
 .layout {
-  position: relative;
-  display: grid;
-  grid-template-rows: 80px minmax(75vh, 1fr) 80px;
-  gap: $gap;
-  margin-inline: $layout-margin;
+	position: relative;
+	display: grid;
+	grid-template-rows: 80px minmax(75vh, 1fr) 80px;
+	gap: $gap;
+	margin-inline: $layout-margin;
 
-  &-none {
-    margin-inline: -$layout-margin;
-  }
+	&-none {
+		margin-inline: -$layout-margin;
+	}
 }
 
 .row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: $gap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: $gap;
 
-  &__content {
-    display: flex;
-    gap: $ind;
-    align-items: center;
-    justify-content: flex-start;
-  }
+	&__content {
+		display: flex;
+		gap: $ind;
+		align-items: center;
+		justify-content: flex-start;
+	}
 }
 
 .content {
-  display: grid;
-  grid-template-columns: minmax(200px, 1fr);
-  gap: $gap;
+	display: grid;
+	grid-template-columns: minmax(200px, 1fr);
+	gap: $gap;
 }
 
 .content-sidebar {
-  display: grid;
-  grid-template-columns: minmax(350px, auto) 1fr;
-  gap: 0 $gap;
-  height: 100%;
+	display: grid;
+	grid-template-columns: minmax(350px, auto) 1fr;
+	gap: 0 $gap;
+	height: 100%;
 }
 
 // layout-none и сайдбар layout-none
 
 .layout-none {
-  padding-inline: $layout-margin;
-  // Сайдбар в layout-none
-  .content-sidebar {
-    .content {
-      margin-inline-end: $ind;
-    }
-  }
+	padding-inline: $layout-margin;
+	// Сайдбар в layout-none
+	.content-sidebar {
+		.content {
+			margin-inline-end: $ind;
+		}
+	}
 }
 
 // Цветовые схемы
 
 @media screen and (max-width: 1300px) {
-  .container {
-    padding: 0 $ind;
-  }
+	.container {
+		padding: 0 $ind;
+	}
 
-  .layout {
-    margin-inline: $layout-margin-mob;
+	.layout {
+		margin-inline: $layout-margin-mob;
 
-    &-none {
-      margin-inline: -$layout-margin-mob;
-      padding-inline: $layout-margin-mob;
-    }
-  }
+		&-none {
+			margin-inline: -$layout-margin-mob;
+			padding-inline: $layout-margin-mob;
+		}
+	}
 }
 
 @media screen and (max-width: 768px) {
-  .layout {
-    &-none {
-      .content-sidebar {
-        .content {
-          margin-inline: $ind;
-        }
-      }
-    }
-  }
-  .row {
-    &__content {
-      flex-wrap: wrap;
-    }
-  }
-  .content-sidebar {
-    grid-template-columns: 1fr;
-  }
+	.layout {
+		&-none {
+			.content-sidebar {
+				.content {
+					margin-inline: $ind;
+				}
+			}
+		}
+	}
+	.row {
+		&__content {
+			flex-wrap: wrap;
+		}
+	}
+	.content-sidebar {
+		grid-template-columns: 1fr;
+	}
 }
 
 @media screen and (max-width: 375px) {
-  .layout, .row {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
+	.layout,
+	.row {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	}
 }
 
 // Класс выключено
 
 .disabled {
-  pointer-events: none;
-  color: $disabled;
+	pointer-events: none;
+	color: $disabled;
 }
 
 // Класс вступительного текста
 
 .introductory {
-  font-family: serif;
-  line-height: normal;
-  padding-block-end: $ind;
-  border-bottom: $border;
+	font-family: serif;
+	line-height: normal;
+	padding-block-end: $ind;
+	border-bottom: $border;
 }
 
 // Стиль страницы 404
 
 .not-available {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  h1, h2 {
-    text-align: center;
-    font-weight: 100;
-  }
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	h1,
+	h2 {
+		text-align: center;
+		font-weight: 100;
+	}
 }
