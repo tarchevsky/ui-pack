@@ -1,0 +1,95 @@
+.action-btns {
+	position: fixed;
+	z-index: 5;
+	inset-block-end: $ind;
+	inset-inline-end: $ind;
+	width: 50px;
+	height: 120px;
+
+	&-up {
+		display: none;
+		opacity: 0;
+		transition: opacity $transition;
+
+		.arrow {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+			transform: translate(-44%, -50%) rotate(180deg);
+
+			&:hover.action-btns-up {
+				background-color: $hover-color;
+			}
+		}
+	}
+
+	&-call {
+		.phone {
+			@include translateAll;
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 15px;
+			height: 15px;
+			cursor: pointer;
+			fill: $base-color;
+
+			&:hover.action-btns-call {
+				background-color: $hover-color;
+			}
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		gap: $gapmin;
+		height: 100%;
+	}
+
+	&__button {
+		@include shadow;
+
+		position: relative;
+		background-color: $hover-color;
+		border-radius: 100px;
+
+		a {
+			width: 100%;
+			height: 100%;
+		}
+
+		button {
+			min-width: revert;
+			width: 45px;
+			height: 45px;
+			margin: 0;
+			padding: 0;
+			transition: all $transition;
+			background-color: transparent;
+			border-radius: 100px;
+
+			&:hover {
+				background-color: $base-color;
+
+				.arrow,
+				.phone {
+					fill: $hover-color;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.action-btns {
+		inset-block-end: $indmin;
+		inset-inline-end: $indmin;
+	}
+}
