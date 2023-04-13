@@ -1,6 +1,6 @@
 //! Basic
 
-import '%components%/img/img';
-import '%components%/burger/burger';
+import '%components%/burger/burger'
+import '%components%/img/img'
 
 //! Other
