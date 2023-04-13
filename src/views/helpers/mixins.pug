@@ -1,3 +1,12 @@
 mixin sprite(name, href)
     svg(class=name)
         use(xlink:href=href)
+
+// +sprite("class", "img/sprites/sprite.svg#svgname" width="value" height="value")
+
+mixin picture(jpg, webp, alt)
+    picture
+        source(data-srcset=jpg)
+        img(data-src=webp data-alt=alt)
+
+//- +picture('jpg', 'webp', 'alt')
