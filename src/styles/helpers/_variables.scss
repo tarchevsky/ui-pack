@@ -1,6 +1,9 @@
 $container: 1300px;
 $layout-margin: 4.86vw;
 $layout-margin-mob: 2vw;
+$font-regular: 'Raleway', sans-serif;
+$font-h: 'Raleway', sans-serif;
+$font-p: 'Raleway', sans-serif;
 $base-color: #333;
 $accent-color: #bdbdbd;
 $hover-color: #fff;
@@ -18,20 +21,20 @@ $indmin: 10px;
 $gap: 20px;
 $gapmin: 10px;
 //$gapmax: ;
-$transition: .3s ease-out;
+$transition: 0.3s ease-out;
 
 // Colors
 
 $white: #fff;
-$aquamarine: #66CCC7;
-$lightblue: #98BBDD;
-$lightpurple: #E2A7C2;
-$darkblue: #211F5C;
-$green: #6C7E2A;
-$lightgreen: #E6E4B3;
-$black: #1F150A;
-$orange: #FFB02E;
-$lightorange: #FFB841;
-$lightyellow: #F5FF66;
-$lightbrown: #9F8170;
-$darkgrey: #4C514A;
+$aquamarine: #66ccc7;
+$lightblue: #98bbdd;
+$lightpurple: #e2a7c2;
+$darkblue: #211f5c;
+$green: #6c7e2a;
+$lightgreen: #e6e4b3;
+$black: #1f150a;
+$orange: #ffb02e;
+$lightorange: #ffb841;
+$lightyellow: #f5ff66;
+$lightbrown: #9f8170;
+$darkgrey: #4c514a;
