@@ -138,6 +138,12 @@ aside {
 		&__slider {
 			margin-inline: -4.5vw;
 		}
+
+		.content-sidebar {
+			.content {
+				margin-inline-end: $ind;
+			}
+		}
 	}
 }
 
@@ -165,18 +171,6 @@ aside {
 	grid-template-columns: minmax(350px, auto) 1fr;
 	gap: 0 $gap;
 	height: 100%;
-}
-
-// layout-none и сайдбар layout-none
-
-.layout-none {
-	padding-inline: $layout-margin;
-	// Сайдбар в layout-none
-	.content-sidebar {
-		.content {
-			margin-inline-end: $ind;
-		}
-	}
 }
 
 // Цветовые схемы
