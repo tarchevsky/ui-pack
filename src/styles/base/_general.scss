@@ -128,7 +128,7 @@ aside {
 .layout {
 	position: relative;
 	display: grid;
-	grid-template-rows: 80px minmax(75vh, 1fr) 80px;
+	grid-template-rows: auto minmax(75vh, 1fr) auto;
 	gap: $gap;
 	margin-inline: $layout-margin;
 
